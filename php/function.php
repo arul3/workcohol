@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root","","job");
+$link = mysqli_connect("localhost", "root","","workcohol");
 
 if (!$link) {
     echo "Error: Unable to connect to MySQL.";
@@ -11,6 +11,8 @@ if (!$link) {
 //variables 
 
 $salt="ar5573";
+
+ $mail_salt="dfijkviquick";
 
 function query($sql)
 {

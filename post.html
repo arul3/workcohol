@@ -112,7 +112,7 @@
 			<div class="job-postdetails">
 				<div class="row">	
 					<div class="col-md-8">
-						<form action="php/posting.php" method="post" id="post">
+						<form action="#" method="post" id="post">
 							<fieldset>
 								<div class="section postdetails">
 									<h4>Post Your Job<span class="pull-right">* Mandatory Fields</span></h4>
@@ -215,7 +215,7 @@
 													<li><a href="#">Top Level</a></li>
 												</ul>	
 
-												<input type="text" name="exprience" required style="display: none;">								
+												<!-- <input type="text" name="exprience"  style="display: none;"> -->								
 											</div>
 										</div>
 									</div>	
@@ -390,11 +390,123 @@
 </script>
 <script type="text/javascript">
 
-	$("#submit").click(function () {
-		// body...
 
-		$("#post").submit();
-	})
+$(document).ready(function(){
+
+	$('input').on('input',function(e){
+					console.log('ok');
+					if($(this).val() != "")
+					{
+						$(this).css({
+							"border" : "1px solid gray"
+						});
+
+
+					}
+
+					if($(this).val() == "")
+
+					{
+						$(this).css({
+							"border" : "1px solid crimson"
+									});
+
+
+					}
+
+				});
+
+
+
+
+
+
+$('#post').submit(function(e){
+				e.preventDefault();
+
+
+				check = true;
+				$('#post input').each(function(){
+					if($(this).val() == ""){
+
+						var al =$(this).attr("id");
+						alert(al);
+
+						$(this).css({
+							"border" : "1px solid crimson"
+						});
+						check = false;
+					}
+				});
+
+
+				if(check){
+					var formdata = $('#form').serialize();
+					console.log(formdata);
+					$.ajax({
+						url : "php/reg_post.php",
+						data : formdata,
+						type : 'post',
+
+						success : function(res){
+							alert('ok');
+						},error : function(){
+							alert('err');
+						}
+					});
+				}else{
+					alert('Please fill in All Fields');
+				}
+
+				return false;
+			});
+
+});
+
+
+
+
+
+
+
+	 /*
+
+	  	$('#post').on('input',function(){
+	  		search_names();
+	  	});
+			function search_names(){
+				var formdata = { keyword : $('#mysea').val()};
+				  		$.ajax({
+									url : "posting.php",
+									data : formdata,
+									type : 'post',
+									success : function(res){
+										//alert('ok');
+											  	var usr = JSON.parse(res);
+											  	usr = usr.users;
+										  	for(b in usr){
+										  		var Template = '<li><a href="#">'+usr[b]+'</li>';
+										  		document.getElementById("search_my").innerHTML = Template;
+										  	  	}
+									},error : function(){
+										//alert('err');
+									}
+								});
+	*/	//	}
+						
+
+
+	  
+
+
+
+
+
+
+
+
+
+
 	
 </script>
 

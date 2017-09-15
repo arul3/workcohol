@@ -2,6 +2,25 @@
 
 include 'function.php';
 
+function check($email)
+{
+
+	$sql = "SELECT * FROM user_info WHERE mail='$email'" ;
+
+	$result = query($sql);
+
+	$r = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+	if($r)
+	{
+		header("Location:../signin.html");
+	}
+
+
+}
+
+
+
 
 if(isset($_POST))
 {
@@ -17,12 +36,17 @@ if(isset($_POST))
 	$mobile = $_POST['mobile'];
 	
 	$status="not";
+	$type = "not";
+
+	check($email);
+
 
 	
 
+
 $passkey = hash('ripemd128',$pass);
 
-$sql = "INSERT INTO user_info (name,pass,email,mobile,status) VALUES ('$name','$passkey','$email','$mobile','$status')";
+$sql = "INSERT INTO user_info (name,mail,pass,mobile,status,type) VALUES ('$name','$email','$passkey','$mobile','$status','$type')";
 
 $res = query($sql);
 

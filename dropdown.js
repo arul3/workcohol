@@ -2,7 +2,7 @@
     
    $('#country_value').val($(event.target).attr('data-value'));
 
-   alert($(event.target).attr('data-value'));
+   
 });
 
 
@@ -11,7 +11,7 @@
     
    $('#category_value').val($(event.target).attr('data-value'));
 
-   alert($(event.target).attr('data-value'));
+   
 });
 
 
@@ -19,7 +19,7 @@
     
    $('#state_value').val($(event.target).attr('data-value'));
 
-   alert($(event.target).attr('data-value'));
+   ;
 });
 
 	
