@@ -107,12 +107,13 @@
 					<div class="user-account">
 						<h2>User Login</h2>
 						<!-- form -->
-						<form action="logging.php">
+						<form action="php/logging.php" method="post">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Username" >
+								<input type="email" class="form-control" placeholder="Email" name="email">
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" placeholder="Password" >
+								<input type="password" class="form-control" placeholder="Password" name="pass">
+
 							</div>
 							<button type="submit" href="#" class="btn" id="login">Login</button>
 						</form><!-- form -->
