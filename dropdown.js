@@ -1,8 +1,13 @@
 	$('#country a').on('click', function(event) {
     
-   $('#country_value').val($(event.target).attr('data-value'));
 
+    var val = $(event.target).attr('data-value');
+
+   $('#country_value').val($(event.target).attr(val));
+
+   alert($(event.target).attr('data-value'));
    
+   alert($("#country_value").val());
 });
 
 
@@ -10,8 +15,10 @@
 	$('#category a').on('click', function(event) {
     
    $('#category_value').val($(event.target).attr('data-value'));
+   alert($(event.target).attr('data-value'));
+   alert($("#category_value").val());
 
-   
+
 });
 
 
@@ -19,7 +26,8 @@
     
    $('#state_value').val($(event.target).attr('data-value'));
 
-   ;
+   alert($(event.target).attr('data-value'));
+   alert($("#state_value").val());
 });
 
 	

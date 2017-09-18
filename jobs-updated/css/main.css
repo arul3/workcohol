@@ -659,15 +659,19 @@ a.verified i {
 }
 
 .latest-jobs-ads {
-	margin-bottom: 15px;
+	margin: 10px;
 	background-color: #fff;
-	padding: 15px 30px;
+	padding: 8px 15px;
+	position: relative;
+	
+	width: 1040px;
 }
 
 .job-ad-item .ad-info span+a {
 	color: #9fa4a4;
 	font-size: 14px;
 	line-height: 16px;
+	width: 1010px;
 }
 
 .job-ad-item .ad-info span {
@@ -727,7 +731,6 @@ a.verified i {
 	width: 100%;
 	border-radius: 4px;
 }
-
 .cta-icon {
 	min-height: 56px;
 }
@@ -2150,12 +2153,13 @@ input:-moz-placeholder {
 }
 
 .job-ad-item {
-	padding: 15px;
+	padding: 4px;
 	overflow: hidden;
 	position: relative;
 	border: 1px solid #f3f3f3;
-	margin: 18px 0;
+	margin: 10px 0;
 	border-radius:2px;	
+	width: 1010px;
 }
 
 .job-ad-item .ad-meta {

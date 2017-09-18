@@ -36,7 +36,10 @@ if(isset($_POST))
 	$mobile = $_POST['mobile'];
 	
 	$status="not";
-	$type = "not";
+	
+	$type = $_POST['type'];     //user type eg company or findr
+
+
 
 	check($email);
 

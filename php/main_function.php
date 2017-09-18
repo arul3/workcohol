@@ -16,7 +16,7 @@ function category_count($cat)
 
 }
 
-public function total_count($count)
+function total_count($count)
 {
 	$sql = "SELECT COUNT(job_id) FROM post_job";
 
@@ -27,7 +27,7 @@ public function total_count($count)
 
 }
 
-public function no_users()
+function no_users()
 {
 
 
@@ -38,6 +38,22 @@ $res = query($sql);
 	return $res;
 
 	
+}
+
+
+ function user_name($id)
+{
+	
+	$sql = "SELECT * FROM user_info WHERE id='$id'";
+
+	$res = query($sql);
+
+	$row = mysqli_fetch_array($res,MYSQLI_ASSOC);
+
+
+	return $row['name'];
+
+
 }
 
 

@@ -10,7 +10,7 @@ $_SESSION['type'] = "user";
 $id =$_SESSION['id'];
 
 
-$sql = "SELECT * FROM post_job LIMIT 8";
+$sql = "SELECT COUNT(job_id) FROM post_job ";
 
 $res = query($sql);
 
