@@ -85,7 +85,7 @@
 
     		width: 149px;
 
-    		height: 47px;
+    		height: 29px;
     		position: relative;
     		top: 20px;
 
@@ -102,6 +102,16 @@
 
            
     	}
+
+        .user_info > .name
+
+        {
+            width: 149px;
+            height: 20px
+            font-size:10px;
+            
+            text-align: center;
+        }
 
         .usr_info > .position
         {

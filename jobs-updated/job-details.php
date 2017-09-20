@@ -1,3 +1,24 @@
+<?php
+
+include 'php/function.php';
+
+
+if(!$_POST) die("die_not post ");
+
+$job_id = $_POST['job_id'];
+
+$sql = "SELECT * FROM post_job WHERE job_id='$job_id'";
+
+$res = query($sql);
+
+if(!$res) die("error ");
+
+$row = mysqli_fetch_array($res,MYSQLI_ASSOC);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   
