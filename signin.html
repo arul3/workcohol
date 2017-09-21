@@ -10,27 +10,14 @@
    	<meta name="description" content="">
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
-
+<!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/testing.css">
    <!-- CSS -->
+   
+    <link rel="stylesheet" href="css/font-awesome.min.css">   
+    <link rel="stylesheet" href="css/main2.css">  
     <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/icofont.css"> 
-    <link rel="stylesheet" href="css/slidr.css">     
-    <link rel="stylesheet" href="css/main.css">  
-	<link id="preset" rel="stylesheet" href="css/presets/preset1.css">	
     <link rel="stylesheet" href="css/responsive.css">
-	
-	<!-- font -->
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Signika+Negative:400,300,600,700' rel='stylesheet' type='text/css'>
-
-	<!-- icons -->
-	<link rel="icon" href="images/ico/favicon.ico">	
-    <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.html">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/ico/apple-touch-icon-57-precomposed.png">
-    <!-- icons -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,63 +28,83 @@
     <!-- Template Developed By ThemeRegion -->
   </head>
   <body>
-	<!-- header -->
-	<header id="header" class="clearfix">
-		<!-- navbar -->
-		<nav class="navbar navbar-default">
-			<div class="container">
-				<!-- navbar-header -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index-2.html"><img class="img-responsive" src="images/logo.png" alt="Logo"></a>
-				</div>
-				<!-- /navbar-header -->
-				
-				<div class="navbar-left">
-					<div class="collapse navbar-collapse" id="navbar-collapse">
-						<ul class="nav navbar-nav">
-							<li><a href="index-2.html">Home</a></li>
-							<li><a href="job-list.html">Job list</a></li>
-							<li><a href="details.html">Job Details</a></li>
-							<li><a href="resume.html">Resume</a></li> 
-							<li class="dropdown active"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Pages<span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="profile.html">Profile</a></li>
-									<li><a href="post-resume.html">Post Resume</a></li>
-									<li><a href="post.html">Job Post</a></li>
-									<li><a href="edit-resume.html">Edit Resume</a></li>
-									<li><a href="profile-details.html">profile Details</a></li>
-									<li><a href="bookmark.html">Bookmark</a></li>
-									<li><a href="applied-job.html">Applied Job</a></li>
-									<li><a href="delete-account.html">Close Account</a></li>
-									<li><a href="signup.html">Job Signup</a></li>
-									<li class="active"><a href="signin.html">Job Signin</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div><!-- navbar-left -->
-				
-				<!-- nav-right -->
-				<div class="nav-right">				
-					<ul class="sign-in">
-						<li><i class="fa fa-user"></i></li>
-						<li><a href="signin.html">Sign In</a></li>
-						<li><a href="signup.html">Register</a></li>
-					</ul><!-- sign-in -->					
+		<!-- header -->
 
-					<a href="post.html" class="btn">Post Your Job</a>
-				</div>
-				<!-- nav-right -->
-			</div><!-- container -->
-		</nav><!-- navbar -->
-	</header><!-- header -->
+<div id="hea_der">
 
+    <!-- navbar -->
+    
+      <div class="con_tainer">
+        <!-- navbar-header -->
+        <div id="logo">
+          <div id="logo_img">
+            <a href="index.html"><img  src="img/techno1.png" alt="Workcohol" title="Workcohol" style="width: 100%;height: 100%;" ></a>
+          </div>
+          
+        </div>
+
+        <div class="navbar_header">
+          
+          <a class="navbar_brand"><i class="fa fa-navicon"></i></a>
+          <div id="manu_list">
+            <div id="lool_nav" class="nav_li"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
+            <div class="nav_li">yoga</div>
+            <div class="nav_li">arul</div>
+            <div class="nav_li">sakthi</div>
+            <div class="nav_li">vijay</div>
+          </div>
+        </div>
+        
+
+        <div id="sea_rch_jabs">
+            <span id="search_icon_1" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span><input type="text" name="" onclick="click_search();" id="sea_rch_input" placeholder=" Search"><span id="search_icon_2" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span>
+        </div>
+
+        <div class="header_left">
+            <div class="header_cont">
+              <div class="pro_li"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></a></div>
+              <div class="pro_li"><a href="job-list.html"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></a></div>
+              <div class="pro_li"><a href="details.html"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></a></div>
+              <div class="pro_li"><a href="chating.php"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></a></div>
+              
+          
+          <a class="profile_list"><i class="fa fa-user-circle" aria-hidden="true"></i><span id="header_manu_name">Profile</span></i></a>
+          <div id="pro_manu_list">
+            <div id="pro_lool_nav" class="pro_nav_li"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
+                  <div class="pro_nav_li"><a href="profile.html">Profile</a></div>
+                  <div class="pro_nav_li"><a href="post-resume.html">Post Resume</a></div>
+                  <div class="pro_nav_li"><a href="post.html">Job Post</a></div>
+                  <div class="pro_nav_li"><a href="edit-resume.html">Edit Resume</a></div>
+                  <div class="pro_nav_li"><a href="profile-details.html">profile Details</a></div>
+                  <div class="pro_nav_li"><a href="applied-job.html">Applied Job</a></div>
+                  <div class="pro_nav_li"><a href="delete-account.html">Close Account</a></div>
+                  <div class="pro_nav_li"><a href="signup.html">Job Signup</a></div>
+                  <div class="pro_nav_li"><a href="signin.html">Job Signin</a></div>
+          </div>
+        
+            </div>
+          
+        </div>
+        <!-- /navbar-header -->
+        
+        <div id="kode_div"></div>
+
+        <!-- nav-right -->
+        <div class="top-icons">
+              <ul class="social-icons">
+              <li class="facebook"><a href="#" target="_blank" data-placement="bottom" title="Workcohol @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="#" target="_blank" data-placement="bottom" title="Workcohol @ Google+">Google+</a></li>
+              <li class="twitter"><a href="#" target="_blank" data-placement="bottom" title="Workcohol @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="#" target="_blank" data-placement="bottom" title="Workcohol @ Linkedin">Linkedin</a></li>
+              <li class="youtube"><a href="#" target="_blank" data-placement="bottom" title="Workcohol YouTube">YouTube</a></li>
+              </ul>
+        </div>
+
+
+      </div><!-- container -->
+    
+  </div>
+<!-- header -->
 	<!-- signin-page -->
 	<section class="clearfix job-bg user-page">
 		<div class="container">
@@ -135,6 +142,14 @@
 	</section><!-- signin-page -->
 	
 	<!-- footer -->
+	<!-- footer -->
+	
+	<!--/Preset Style Chooser--> 
+	
+	<!--/End:Preset Style Chooser-->
+	
+    <!-- JS -->
+   <!-- footer -->
 	<footer id="footer" class="clearfix">
 		<!-- footer-top -->
 		<section class="footer-top clearfix">
@@ -143,7 +158,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget">
-							<h3>Quik Links</h3>
+							<h5>Quik Links</h5>
 							<ul>
 								<li><a href="#">About Us</a></li>
 								<li><a href="#">Contact Us</a></li>
@@ -158,7 +173,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget">
-							<h3>How to sell fast</h3>
+							<h5>How to sell fast</h5>
 							<ul>
 								<li><a href="#">How to sell fast</a></li>
 								<li><a href="#">Membership</a></li>
@@ -173,7 +188,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget social-widget">
-							<h3>Follow us on</h3>
+							<h5>Follow us on</h5>
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook-official"></i>Facebook</a></li>
 								<li><a href="#"><i class="fa fa-twitter-square"></i>Twitter</a></li>
@@ -186,7 +201,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget news-letter">
-							<h3>Newsletter</h3>
+							<h5>Newsletter</h5>
 							<p>Jobs is Worldest leading Portal platform that brings!</p>
 							<!-- form -->
 							<form action="#">
@@ -205,42 +220,49 @@
 			</div>
 		</div><!-- footer-bottom -->
 	</footer><!-- footer -->
+
 	
 	<!--/Preset Style Chooser--> 
-	<div class="style-chooser">
-		<div class="style-chooser-inner">
-			<a href="#" class="toggler"><i class="fa fa-cog fa-spin"></i></a>
-			<h4>Presets</h4>
-			<ul class="preset-list clearfix">
-				<li class="preset1 active" data-preset="1"><a href="#" data-color="preset1"></a></li>
-				<li class="preset2" data-preset="2"><a href="#" data-color="preset2"></a></li>
-				<li class="preset3" data-preset="3"><a href="#" data-color="preset3"></a></li>
-				<li class="preset4" data-preset="4"><a href="#" data-color="preset4"></a></li>
-			</ul>
-		</div>
-	</div>
 	<!--/End:Preset Style Chooser-->
 	
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/price-range.js"></script>   
-    <script src="js/main.js"></script>
-	<script src="js/switcher.js"></script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+    <script type="text/javascript">
 
-	  ga('create', 'UA-73239902-1', 'auto');
-	  ga('send', 'pageview');
+    
 
-	</script>	
-	<script type="text/javascript">
+      $(".profile_list").click(function(){
+          $(".pro_nav_li").css("visibility", "visibile");
+          $("#pro_manu_list").slideToggle(1);
+          $(".pro_nav_li").slideToggle(1);
+      }); 
+    $(".navbar_brand").click(function(){
+          $(".nav_li").css("visibility", "visibile");
+          $("#manu_list").slideToggle(1);
+          $(".nav_li").slideToggle(1);
+     }); 
 
+     $("#pro_manu_list").mouseleave(function(){
+              $('#pro_manu_list').css("display", "none");
+     });          
+    
+  function click_search(){
 
-	</script>
+      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: initial;border-top-left-radius:3px ;   border-top-right-radius: 0px; border-bottom-left-radius: 3px;border-bottom-right-radius:0px ;';
+      document.getElementById('search_icon_2').style.cssText = 'display: initial;';
+      document.getElementById('search_icon_1').style.cssText = 'display: none;';
+
+  }
+  $("#sea_rch_input").focusout(function(){
+
+      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: hidden;border-top-left-radius:0px ;   border-top-right-radius: 3px; border-bottom-left-radius: 0px;border-bottom-right-radius:3px ;';
+      document.getElementById('search_icon_1').style.cssText = 'display: initial;';
+      document.getElementById('search_icon_2').style.cssText = 'display: none;';
+
+  });
+    document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
+</script>
+
   </body>
 
 <!-- Mirrored from demo.themeregion.com/jobs-updated/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->

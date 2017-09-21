@@ -355,13 +355,7 @@
 	h5 {
 		font-size:14px;
 	}
-	.nav-right{
-		display:inline-block;
-	}
-	.top-icons{
-		width:100%;
-		margin-right:80px;
-	}
+	
 	#header a.btn {
 		position:absolute;
 		top:12px;

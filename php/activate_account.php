@@ -31,22 +31,34 @@ if($hash_salt == $hash)
 function automatic_login()
 {
 	
+	global $mail;
 
 	$sql = "SELECT * FROM user_info WHERE mail='$mail'";
 	$result = query($sql);
 
-	$row=mysqli_fetch_array($res,MYSQLI_ASSOC);
+	$row = 	mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 	$_SESSION['id']  = $row['id'];
 
 	$_SESSION['type'] = $row['type'];
 
-	header("Location: ../main.php");
-
-	header("Cache-Control: no-cache");
+	if ($_SESSION['type']=="job_seeker") {
 	
-	header("Pragma: no-cache");
 
+		header("Location: ../job_seeker/");
+	}
+
+	if ($_SESSION['type']== "employer" OR "Employer" ) {
+		
+
+									header("Location: ../job_employer/");
+
+									header("Cache-Control: no-cache");
+	
+									header("Pragma: no-cache");
+
+									}
+	
 }
 
 

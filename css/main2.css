@@ -377,7 +377,7 @@ textarea {
 	border-radius:4px;
 	background-color:#fff;
 	position:relative;
-	/* width: 100%; */
+	width: 100%;
 	/* display: inline-flex; */
 }
 
@@ -659,21 +659,15 @@ a.verified i {
 }
 
 .latest-jobs-ads {
-	margin: 10px;
+	margin-bottom: 15px;
 	background-color: #fff;
-	padding: 8px 15px;
-	position: relative;
-	
-	width: 810px;
-
-	box-shadow: 0px 0px 2px;
+	padding: 15px 30px;
 }
 
 .job-ad-item .ad-info span+a {
 	color: #9fa4a4;
 	font-size: 14px;
 	line-height: 16px;
-	width: 800px;
 }
 
 .job-ad-item .ad-info span {
@@ -733,6 +727,7 @@ a.verified i {
 	width: 100%;
 	border-radius: 4px;
 }
+
 .cta-icon {
 	min-height: 56px;
 }
@@ -1118,6 +1113,7 @@ a.verified i {
 .banner-form-full.banner-form .form-control, 
 .banner-form-full.banner-form .category-dropdown {
 	width:20%;
+	background-color: transparent;
 }
 
 .banner-form-full.banner-form input {
@@ -1931,13 +1927,12 @@ a.verified i {
 }
 
 .social-widget ul li a {
-	display:inline-block;
 }
 
 .footer-widget ul li a i {
     color: #3b5998;
     font-size: 20px;
-    vertical-align: -webkit-baseline-middle;
+    vertical-align: middle;
     margin-right: 8px;
 }
 
@@ -1951,7 +1946,7 @@ a.verified i {
 }
 
 .social-widget .fa-google-plus-square {
-	color: #282725;
+	color: #d23c2c;
 }
 
 .social-widget .fa-youtube-play {
@@ -1998,7 +1993,7 @@ input:-moz-placeholder {
 }
 
 .footer-bottom {
- 	background-color: #f7f7f7;
+ 	background-color: #2b2b2d;
  	color: #6e6e6e;
  	font-size: 14px;
  	padding: 19px 0 12px;
@@ -2155,13 +2150,12 @@ input:-moz-placeholder {
 }
 
 .job-ad-item {
-	padding: 4px;
+	padding: 15px;
 	overflow: hidden;
 	position: relative;
 	border: 1px solid #f3f3f3;
-	margin: 10px 0;
+	margin: 18px 0;
 	border-radius:2px;	
-	width: 800px;
 }
 
 .job-ad-item .ad-meta {
@@ -2344,7 +2338,7 @@ input:-moz-placeholder {
 /* Job List Page */
 
 .job-bg {
-	
+	background-image: url(../images/bg/job-list-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -2353,6 +2347,7 @@ input:-moz-placeholder {
 	margin-top: 0;
 	background-color: rgba(0, 0, 0, 0.14);
 	padding: 10px 15px;
+	width: 86.4%;
 }
 
 
@@ -3174,7 +3169,7 @@ input, select, a, .transition,
 }
 
 .style-chooser-inner {
-	position: relative;
+	position: absolute;
 	background-color: #ddd;
 	padding: 15px;
 }
@@ -3196,6 +3191,7 @@ input, select, a, .transition,
 	width: 58px;
 	float: left;
 	padding: 5px;
+	/* background-color: #dddddd; */
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
@@ -3225,93 +3221,6 @@ input, select, a, .transition,
 }
 
 
-ul.social-icons li {
-    background-image: url(../img/social.png);
-    background-repeat: no-repeat;
-    background-color: #FFF;
-    background-position: 0 100px;
-    display: inline-block;
-    margin: -1px 1px 5px 0;
-    padding: 0;
-    border-radius: 100%;
-    overflow: visible;
-    transition: all .3s ease;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
-    -moz-border-radius: 100%;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    -webkit-border-radius: 00%;
-    -webkit-transition: all .3s ease;
-    border: 1px solid #fff;
-}
-ul.social-icons {
-    padding: 0;
-    width: 100%;
-    margin-left: 30px;
-}
-ul.social-icons li[class] a {
-    text-indent: -10065px;
-    visibility: hidden;
-}
-ul.social-icons li.facebook {
-    width: 30px;
-    height: 30px;
-    background-position: 0 -121px;
-}
-ul.social-icons li.googleplus {
-    width: 30px;
-    height: 30px;
-    background-position: 0 -301px;
-}
-ul.social-icons li.twitter {
-    width: 30px;
-    height: 30px;
-    background-position: 0 -1141px;
-}
-ul.social-icons li.linkedin {
-    width: 30px;
-    height: 30px;
-    background-position: 0 -541px;
-}
-ul.social-icons li.youtube {
-    width: 30px;
-    height: 30px;
-    background-position: 0 -1380px;
-}
-ul.social-icons li.facebook:hover {
-    background-position: 0 -151px;
-}
-ul.social-icons li.googleplus:hover {
-    background-position: 0 -331px;
-}
-ul.social-icons li.twitter:hover {
-    background-position: 0 -1171px;
-}
-ul.social-icons li.linkedin:hover {
-    background-position: 0 -571px;
-}
-ul.social-icons li.youtube:hover {
-    background-position: 0 -1410px;
-}
-
-.top-icons {
-    text-align: right;
-    width: 100%;
-    margin: 0px;
-    margin-top: -32px;
-}
-
-a.dropdown-toggle {
-    background-image: url("img/profile.png");
-    background-size: 35%;
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    margin-top: 9px;
-    width: 100%;
-    
-}
-
 li.dropdown {
     width: 85px;
 }
@@ -3322,17 +3231,6 @@ li.dropdown img {
     margin-left: 26%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .footer-widget ul li a:hover {
     color: #c3c1d8;
 }
@@ -3342,3 +3240,111 @@ p {}
 .footer-widget.news-letter p {
     color: #858585;
 }
+
+.job-ad-item:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.dropdown.category-dropdown
+ a {
+    background-color: transparent;
+}
+#description{
+	padding: 10px;
+	width: 100%;
+}
+
+#description{
+	text-align: center;
+	display: none;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  top: 42%;
+  float: right;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  right: 0;
+  bottom: 0;
+  background-color: darkgray;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  border-radius: 3px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #0072bc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+i.fa.fa-bell-o {
+    font-size: 20px;
+}
+
+i.fa.fa-home {
+    font-size: 20px;
+}
+
+i.fa.fa-globe {
+    font-size: 20px;
+}
+
+i.fa.fa-file-text {
+    font-size: 20px;
+}
+
+i.fa.fa-user-o {
+    font-size: 20px;
+}
+.toggle_color{
+	display: none;
+}
+#publish_on_job {
+    width: 100px;
+    height: 65px;
+    background-color: transparent;
+    position: relative;
+    float: right;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+

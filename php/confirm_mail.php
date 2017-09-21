@@ -19,7 +19,7 @@ if($res)
 $row =mysqli_fetch_array($res,MYSQLI_ASSOC);
 
 if($row['pass'] == $hash)
-{
+   {
 
 $url_link = url_generate($mail);
 
@@ -30,9 +30,12 @@ $Location ="Location:".$url_link;
 header($Location);
 
 
+   }else{ header("Location: signing.php?step=reload");  }
+
+
 }
 	
-}
+
 
 function sendmail($mail,$url_link)
 {

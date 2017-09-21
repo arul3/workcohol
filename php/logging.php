@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include 'function.php';
 
 if ($_POST) {
@@ -23,10 +24,26 @@ if ($_POST) {
 	{
 		$row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 
+		if ($status == "not")
+		 {
+			die("not status");
+		}else{
+
 		$_SESSION['id'] =$row['id'];
 
-		header('Location:../index.html');
+		$_SESSION['type'] = $row['type'];
 
+		if ($row['type']== "job_seeker") {    header('Location:../job_seeker/');  }
+
+			if ($row['type']== "employer") {    header('Location:../job_employer/'); }
+		
+
+
+			
+
+
+
+			}
 	}
 }
 
