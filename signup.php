@@ -11,26 +11,11 @@
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/icofont.css"> 
-    <link rel="stylesheet" href="css/slidr.css">     
+    <link rel="stylesheet" type="text/css" href="css/testing.css">
+   <!-- CSS -->
+   
+    <link rel="stylesheet" href="css/font-awesome.min.css">   
     <link rel="stylesheet" href="css/main.css">  
-	<link id="preset" rel="stylesheet" href="css/presets/preset1.css">	
-    <link rel="stylesheet" href="css/responsive.css">
-	
-	<!-- font -->
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Signika+Negative:400,300,600,700' rel='stylesheet' type='text/css'>
-
-	<!-- icons -->
-	<link rel="icon" href="images/ico/favicon.ico">	
-    <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.html">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/ico/apple-touch-icon-57-precomposed.png">
-    <!-- icons -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,10 +24,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Template Developed By ThemeRegion -->
-  </head>
-  <body>
-	<!-- header -->
-	<!-- header -->
+<?php  include "job_seeker/header.php" ?>
+
 
 	<section class="job-bg user-page">
 		<div class="container">
@@ -52,12 +35,12 @@
 					<div class="user-account job-user-account">
 						<h2>Create An Account</h2>
 							<ul class="nav nav-tabs text-center" role="tablist">
-								<li role="presentation" class="active"><a href="#find-job" aria-controls="find-job" role="tab" data-toggle="tab">Find A Job</a></li>
-								<li role="presentation"><a href="#post-job" aria-controls="post-job" role="tab" data-toggle="tab">Post A Job</a></li>
+								<li role="presentation" class="active"><a href="#find-job" aria-controls="find-job" role="tab" data-toggle="tab" id="find">Find A Job</a></li>
+								<li role="presentation"><a href="#post-job" aria-controls="post-job" role="tab" data-toggle="tab" id="post" >Post A Job</a></li>
 							</ul>
 
 							<div class="tab-content">
-								<div role="tabpanel" class="tab-pane active" id="find-job">
+								<div role="tabpanel" class="tab-pane" id="find-job">
 									<form action="php/signing.php" method="post" >
 										<div class="form-group">
 											<input type="text" class="form-control" name="name" placeholder="Name" required>
@@ -195,6 +178,34 @@
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+
+    	$("#post-job").css({"display": "none" });
+    	
+    	$("#find").click(function (argument) {
+    		
+    		$("#post-job").css({"display": "none" });
+
+    		
+    		$("#find-job").css({"display": "initial" });
+
+
+
+    	});
+
+
+    	$("#post").click(function (argument) {
+    		
+    		$("#post-job").css({"display": "initial" });
+
+    		
+    		$("#find-job").css({"display": "none" });
+
+
+
+    	});
+    </script>
     	
   </body>
 

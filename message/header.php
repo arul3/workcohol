@@ -29,9 +29,9 @@
 
         <div class="header_left">
             <div class="header_cont">
-              <div class="pro_li"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></a></div>
-              <div class="pro_li"><a href="resume.html"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></a></div>
-              <div class="pro_li"><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></a></div>
+              <div class="pro_li"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></a></div>
+              <div class="pro_li"><a href="job-list.html"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></a></div>
+              <div class="pro_li"><a href="details.html"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></a></div>
               <div class="pro_li"><a href="../message/chating.php"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></a></div>
               
           <div class="pro_li" id="pro_slide">
@@ -39,19 +39,10 @@
           <div id="pro_manu_list_2">
             <div id="pro_lool_nav" ><i class="fa fa-caret-up" aria-hidden="true"></i></div>
                  <a> <div class="pro_nav_li">Profile</div></a>
-                 <a href="post-resume.html">
-
-                  <div class="pro_nav_li">Post Resume</div>
-
-                  </a>
-               
-                 <a href="">
-                  <div class="pro_nav_li">Resume Edit</div>
-
-                </a>
-                 <a href="bookmark-list.php"> 
-                        <div class="pro_nav_li">Book Marked</div>
-                  </a>
+                 <a> <div class="pro_nav_li">Post Resume</div></a>
+                 <a> <div class="pro_nav_li">Applied Jobs</div></a>
+                 <a> <div class="pro_nav_li">Resume Edit</div></a>
+                 <a> <div class="pro_nav_li">Book Marked</div></a>
                  <a> <div class="pro_nav_li">Log out</div></a>
           </div>
       </div>

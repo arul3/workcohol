@@ -32,7 +32,28 @@ else      {  		return true;  }
 
 
 }
+function check_bookmark($user,$job_id)
+{
 
+$SQL ="SELECT * FROM bookmark WHERE job_id='$job_id' AND user_id='$user'";
+
+
+$rest = query($SQL);
+
+if(!$rest) die("error check apply");
+
+$num = mysqli_num_rows($rest);
+
+
+if($num==0){ 		return false; }
+
+else      {  		return true;  }
+
+
+
+
+	
+}
 
 
 
@@ -176,12 +197,25 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
   							
   								}
 
-							?>
+							if(check_bookmark($user,$job_id))
+							{
 
+							echo "<button  class=\"btn btn-primary bookmark\">
+								<i class=\"fa fa-bookmark-o\" aria-hidden=\"true\"></i>
+							Bookmarked</button>
+												";
+							}
+
+							else
+							{
+
+							echo "<button id=\"bookmark\" class=\"btn btn-primary bookmark\">
+								<i class=\"fa fa-bookmark-o\" aria-hidden=\"true\"></i>
+							Bookmark</button>
+												";	
+							}
 							
-
-							<button id="bookmark" class="btn btn-primary bookmark"><i class="fa fa-bookmark-o" aria-hidden="true"></i>Bookmark</button>
-
+							?>
 						</div>
 						<ul class="share-social">
 							<li>Share this ad</li>
@@ -319,6 +353,35 @@ echo "var job_id=\"".$job_id."\";";
 
 
 		});  
+
+
+		$("#bookmark").click(function(){
+			
+
+			var html ='<i class="fa fa-briefcase" aria-hidden="true"></i>Bookmarked';
+			
+				var formdata = new Object();
+				
+				formdata.job_id = job_id;
+
+				$.post("../php/bookmarking.php",formdata,function (data,status) {
+					
+
+					if(data== "success"){  
+
+						$("#bookmark").html(html); 
+
+						console.log("succes");
+				}
+
+				});
+
+
+		});  
+
+
+
+
 
 	</script>	
   </body>

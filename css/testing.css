@@ -12,7 +12,8 @@ body,html{
 .con_tainer{
   width: 100%;
   height: 100%;
-  background-color: rgba(0,20,60,1);
+  background-color: rgba(38,62,74,1);
+
   display: inline-flex;
   border-bottom: 0.02px solid rgb(179,182,185);
 }
@@ -464,6 +465,16 @@ span#header_manu_name {
 }
 
 div#pro_slide {width: 27px;}
+
+.post_resume
+{
+  background-color: rgb(0,132,191);
+
+}
+.bshadow
+{
+  box-shadow: 0px,0px,3px;
+}
 
 
 

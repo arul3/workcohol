@@ -1417,7 +1417,6 @@ a.verified i {
     color: #000000;
     font-weight: 400;
     margin-right:35px;
-	margin-bottom:10px;
 }
 
 .checkbox label:last-child {
@@ -1505,28 +1504,38 @@ a.verified i {
  ========================================================================== */
 
 .user-account {
+	width: 30%;
 	background-color: #fff;
 	border-radius: 4px;
-	padding: 40px 50px;
+	padding: 17px 50px 35px 50px;
+	position: relative;
+	left: 33%;
+	text-align: center;
 }
 
 .user-account h2 {
 	color: #00a651;
 	font-weight: 700;
-	margin-bottom: 55px;
+	margin-bottom: 35px;
 }
 
 .user-account input {
 	height: 44px;
-	margin-bottom: 30px;
+	margin-bottom: 18px;
 	font-size: 16px;
+	width: 92%;
+	padding: 0% 4%;
 }
 
 .user-account .btn {
 	background-color: #00a651;
 	color: #fff;
-	padding: 5px 32px 7px;
-	margin-top: 10px;	
+	padding: 9px 32px;
+	margin-top: 6px;
+	text-align: center;
+	position: relative;
+	border: 0px;
+	cursor: pointer;
 }
 
 .user-account select {
@@ -1538,6 +1547,7 @@ a.verified i {
 
 .user-account .checkbox label, .forgot-password a{
 	color:#b9b9b9;
+	cursor: pointer;
 }
 
 .user-account .checkbox label:hover, .forgot-password a:hover {
@@ -1545,11 +1555,12 @@ a.verified i {
 }
 .user-account .user-option {
 	overflow:hidden;
+	display: inline-grid;
 	margin-top:55px;
+	width: 100%;
 }
 
 .user-option .forgot-password {
-	margin-top:10px;
 }
 
 .user-page .btn-primary {
@@ -1558,6 +1569,8 @@ a.verified i {
 	font-size:18px;
 	border-radius:4px;
 	margin-top:25px;
+	text-align: center;
+	color: whitesmoke;
 	background-color:#0072bc;
 }
 
@@ -2345,8 +2358,7 @@ input:-moz-placeholder {
 
 .job-bg {
 	
-	background-repeat: no-repeat;
-	background-size: contain;
+	background-color: rgb(0,131,194);
 }
 
 .banner-form-full.job-list-form {
@@ -2864,7 +2876,8 @@ input:-moz-placeholder {
 	font-weight: 500;
 	margin-right: 0;
 	border-radius: 0;
-	border-bottom: 1px solid #e3e3e3;
+	position: relative;
+	top: -9px;
 	background-color: #f7f7f7;
 }
 

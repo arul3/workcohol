@@ -65,7 +65,7 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 									<div class="item-image">
 							<?php  		echo"	<a href=\"job-details.php?id=".$row['job_id']."\" > "?>
 
-											<img src="images/job/3.png" alt="Image" class="img-responsive"></a>
+											<img src="../images/job/11.png" alt="Image" class="img-responsive"></a>
 									</div><!-- item-image -->
 								</div>
 
@@ -176,12 +176,20 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 							<div class="item-info">
 								<div class="item-image-box">
 									<div class="item-image">
-										<a href="job-details.html"><img src="images/job/3.png" alt="Image" class="img-responsive"></a>
+										
+										<?php  		echo"	<a href=\"job-details.php?id=".$row['job_id']."\" > "?>
+
+
+											<img src="../images/job/11.png" alt="Image" class="img-responsive"></a>
 									</div><!-- item-image -->
 								</div>
 
 								<div class="ad-info">
-									<span><a href="job-details.html" class=title>
+									<span>
+								<?php
+								echo    "		<a  href=\"job-details.php?id=".$row['job_id']."\" class=title>";
+			
+								?>
 										
 										<?php echo $row['title'] ?>
 									</a> @ <a href="#"><?php echo  $row['company_name']; ?></a></span>

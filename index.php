@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<!-- Mirrored from demo.themeregion.com/jobs-updated/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->
+<!-- Mirrored from demo.themeregion.com/jobs-updated/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
    	<meta name="description" content="">
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
-
+<!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/testing.css">
    <!-- CSS -->
    
@@ -27,79 +27,56 @@
 <?php  include "job_seeker/header.php" ?>
 
 
-	<section class="job-bg user-page">
+	<!-- signin-page -->
+	<section class="clearfix job-bg user-page">
 		<div class="container">
 			<div class="row text-center">
 				<!-- user-login -->			
 				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-					<div class="user-account job-user-account">
-						<h2>Create An Account</h2>
-							<ul class="nav nav-tabs text-center" role="tablist">
-								<li role="presentation" class="active"><a href="#find-job" aria-controls="find-job" role="tab" data-toggle="tab">Find A Job</a></li>
-								<li role="presentation"><a href="#post-job" aria-controls="post-job" role="tab" data-toggle="tab">Post A Job</a></li>
-							</ul>
+					<div class="user-account">
+						<h2>User Login</h2>
+						<!-- form -->
+						<form action="php/logging.php" method="post">
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="  Email" name="email">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="  Password" name="pass">
 
-							<div class="tab-content">
-								<div role="tabpanel" class="tab-pane active" id="find-job">
-									<form action="php/signing.php" method="post" >
-										<div class="form-group">
-											<input type="text" class="form-control" name="name" placeholder="Name" required>
-										</div>
-										<div class="form-group">
-											<input type="email" class="form-control" name="email" placeholder="Email Id" required>
-										</div>
-										<div class="form-group">
-											<input type="password" class="form-control" name="pass" placeholder="Password" required>
-										</div>
-										
-
-
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Mobile Number" maxlength="10" name="mobile"  required>
-										</div>
-										<!-- select -->
-									
-		
-										<div class="checkbox">
-											<label class="pull-left checked" for="signing"><input type="checkbox" name="signing" id="signing"> By signing up for an account you agree to our Terms and Conditions </label>
-										</div><!-- checkbox -->	
-										<input type="text" name="type" value="job_seeker" hidden>
-
-										<button type="submit" class="btn">Registration</button>	
-									</form>
-								</div>
-								<div role="tabpanel" class="tab-pane" id="post-job">
-									<form action="php/signing.php" method="post">
-										<div class="form-group">
-											<input type="text" name="name" class="form-control" placeholder="Employer Name"  required>
-										</div>
-										<div class="form-group">
-											<input type="email" name="email" class="form-control" placeholder="Email Id" required>
-										</div>
-										<div class="form-group">
-											<input type="password" name="pass" class="form-control" placeholder="Password" minlength="8" required>
-										</div>
-									
-										<div class="form-group">
-											<input type="text" name="mobile" class="form-control" placeholder="Contact Number" required>
-										</div>
-										<div class="checkbox">
-											<label class="pull-left checked" for="signing-2"><input type="checkbox" name="signing-2" id="signing-2">By signing up for an account you agree to our Terms and Conditions</label>
-										</div><!-- checkbox -->	
-
-										<input type="text" name="type" value="employer" hidden>
-
-										<button type="submit" class="btn">Registration</button>	
-									</form>
-								</div>
-							</div>				
+							</div>
+							<button type="submit" href="#" class="btn" id="login">Login</button>
+						</form><!-- form -->
+					
+						<!-- forgot-password -->
+						<div class="user-option">
+							<div id="pass_change">
+							<div class="checkbox pull-left">
+								<label for="logged"><input type="checkbox" name="logged" id="logged"> Keep me logged in </label>
+							</div>
+							<div class="pull-right forgot-password">
+								<a href="#">Forgot password</a>
+							</div>
+						</div>
+						<div id="create_change">
+							<a href="signup.php" class="btn-primary">Create a New Account</a>
+						</div>
+						</div><!-- forgot-password -->
 					</div>
+					
 				</div><!-- user-login -->			
 			</div><!-- row -->	
 		</div><!-- container -->
-	</section><!-- signup-page -->
-
+	</section><!-- signin-page -->
+	
 	<!-- footer -->
+	<!-- footer -->
+	
+	<!--/Preset Style Chooser--> 
+	
+	<!--/End:Preset Style Chooser-->
+	
+    <!-- JS -->
+   <!-- footer -->
 	<footer id="footer" class="clearfix">
 		<!-- footer-top -->
 		<section class="footer-top clearfix">
@@ -108,7 +85,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget">
-							<h3>Quik Links</h3>
+							<h5>Quik Links</h5>
 							<ul>
 								<li><a href="#">About Us</a></li>
 								<li><a href="#">Contact Us</a></li>
@@ -123,7 +100,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget">
-							<h3>How to sell fast</h3>
+							<h5>How to sell fast</h5>
 							<ul>
 								<li><a href="#">How to sell fast</a></li>
 								<li><a href="#">Membership</a></li>
@@ -138,7 +115,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget social-widget">
-							<h3>Follow us on</h3>
+							<h5>Follow us on</h5>
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook-official"></i>Facebook</a></li>
 								<li><a href="#"><i class="fa fa-twitter-square"></i>Twitter</a></li>
@@ -151,7 +128,7 @@
 					<!-- footer-widget -->
 					<div class="col-sm-3">
 						<div class="footer-widget news-letter">
-							<h3>Newsletter</h3>
+							<h5>Newsletter</h5>
 							<p>Jobs is Worldest leading Portal platform that brings!</p>
 							<!-- form -->
 							<form action="#">
@@ -170,15 +147,50 @@
 			</div>
 		</div><!-- footer-bottom -->
 	</footer><!-- footer -->
+
 	
 	<!--/Preset Style Chooser--> 
-	
 	<!--/End:Preset Style Chooser-->
 	
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    	
+    <script type="text/javascript">
+
+    
+
+      $(".profile_list").click(function(){
+          $(".pro_nav_li").css("visibility", "visibile");
+          $("#pro_manu_list").slideToggle(1);
+          $(".pro_nav_li").slideToggle(1);
+      }); 
+    $(".navbar_brand").click(function(){
+          $(".nav_li").css("visibility", "visibile");
+          $("#manu_list").slideToggle(1);
+          $(".nav_li").slideToggle(1);
+     }); 
+
+     $("#pro_manu_list").mouseleave(function(){
+              $('#pro_manu_list').css("display", "none");
+     });          
+    
+  function click_search(){
+
+      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: initial;border-top-left-radius:3px ;   border-top-right-radius: 0px; border-bottom-left-radius: 3px;border-bottom-right-radius:0px ;';
+      document.getElementById('search_icon_2').style.cssText = 'display: initial;';
+      document.getElementById('search_icon_1').style.cssText = 'display: none;';
+
+  }
+  $("#sea_rch_input").focusout(function(){
+
+      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: hidden;border-top-left-radius:0px ;   border-top-right-radius: 3px; border-bottom-left-radius: 0px;border-bottom-right-radius:3px ;';
+      document.getElementById('search_icon_1').style.cssText = 'display: initial;';
+      document.getElementById('search_icon_2').style.cssText = 'display: none;';
+
+  });
+    document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
+</script>
+
   </body>
 
+<!-- Mirrored from demo.themeregion.com/jobs-updated/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->
 </html>

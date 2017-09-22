@@ -140,52 +140,33 @@ include '../php/job_list.php';
 					<h4>Latest Jobs</h4>
 					 <!-- Nav tabs -->      
 					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation"><a href="#hot-jobs" data-toggle="tab"
+						<li role="presentation"  class="active"><a href="#hot-jobs" data-toggle="tab"
 							id="hot-list">Hot Jobs</a></li>
-						<li role="presentation" class="active" >
+						
+						<li role="presentation"  >
 							<a href="#recent-jobs" data-toggle="tab"  id="recent-list">Recent Jobs
-							</a></li>
+							</a>
+						</li>
 
 							<li role="presentation"><a href="#popular-jobs" data-toggle="tab" id="applied-list">Applied Jobs</a>
 							</li>
+							
 						
 					</ul>
 				</div>
 
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in" id="hot-jobs">
+					<div role="tabpanel" class="tab-pane fade in active" id="display-area">
 						<!-- ad-item -->	
 
-						<!-- ad-item -->	
+					<?php hot_list(); ?>	
 
-					<?php hot_list(); ?>
-					
-						<!-- ad-item -->	
 
-						<!-- ad-item -->
 					</div><!-- tab-pane -->
 
-					<div role="tabpanel" class="tab-pane fade in active" id="recent-jobs">
-						
-
-						<?php  job_list();  ?> 
-						<!-- ad-item -->						
 					
-					<!-- ad-item -->	
-					</div><!-- tab-pane -->
 
 
-					<div role="tabpanel" class="tab-pane fade" id="popular-jobs">
-						<!-- ad-item -->	
-					
-						<!-- ad-item -->	
-					
-						
-
-						
-					</div>
-
-				<!-- tab-pane -->
 				</div><!-- tab-content -->
 			</div><!-- trending ads -->		
 
@@ -452,6 +433,9 @@ orderby="salary_max";
 $("#recent-list").click(function (evt) {
 
 
+
+
+
 offset=0;
 
 orderby="time";
@@ -543,7 +527,7 @@ $("#applied-list").click(function (evt) {
 
 				if (status == "success") {    
 
-											$("#popular-jobs").html(data);
+											$("#display-area").html(data);
 
 
 										 }
@@ -579,12 +563,12 @@ function load_tapContent(data)
 						if(orderby=="time")
 						
 							
-							$("#recent-jobs").html(data);
+							$("#display-area").html(data);
 
 						if(orderby=="salary_max")
 
 						
-							$("#hot-jobs").html(data);
+							$("#display-area").html(data);
 
 
 
