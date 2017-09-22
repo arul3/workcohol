@@ -112,6 +112,6 @@
       document.getElementById('search_icon_2').style.cssText = 'display: none;';
 
   });
-    document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
+    // document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
 </script>
  

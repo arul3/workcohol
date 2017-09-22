@@ -2,10 +2,12 @@
 
 session_start();
 
-$_SESSION['id']=2;
+if (!isset($_SESSION['id'])) {
+		die();
+}
 
 
-
+//echo $_SESSION['type'];
 
 ?>
 

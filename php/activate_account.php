@@ -23,7 +23,8 @@ if($hash_salt == $hash)
 	$result = query($sql);
 
 	if($result)
-		automatic_login();
+
+	automatic_login();
 
 }
 
@@ -42,13 +43,20 @@ function automatic_login()
 
 	$_SESSION['type'] = $row['type'];
 
+
+
 	if ($_SESSION['type']=="job_seeker") {
+
 	
 
 		header("Location: ../job_seeker/");
+
+		header("Cache-Control: no-cache");
+	
+		header("Pragma: no-cache");
 	}
 
-	if ($_SESSION['type']== "employer" OR "Employer" ) {
+	if ($_SESSION['type']== "employer"  ) {
 		
 
 									header("Location: ../job_employer/");

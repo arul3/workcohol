@@ -114,9 +114,9 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 										</ul>
 									</div><!-- ad-meta -->									
 								</div><!-- ad-info -->
-								<div class="button">
-								   <?php 	echo "<button  class=\"btn btn-primary apply\" data-id=\"".$row['job_id']."\">Apply Now</button>";
-								   ?>
+								<div class="button"><a 
+								   <?php 	echo " href=\"job-details.php?id=".$row['job_id']. "\"> <button  class=\"btn btn-primary apply\" data-id=\"".$row['job_id']."\">Apply Now</button>";
+								   ?></a>
 
 								</div>
 							</div><!-- item-info -->

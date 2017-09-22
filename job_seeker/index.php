@@ -2,7 +2,10 @@
 
 session_start();
 
-$_SESSION['id']=1;
+if (!isset($_SESSION['id'])) {
+	
+	die();
+}
 
 
 include '../php/job_list.php';
@@ -27,13 +30,10 @@ include '../php/job_list.php';
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css">     
+   <!--  <link rel="stylesheet" href="../css/bootstrap.min.css" > -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">    
     <link rel="stylesheet" href="../css/main.css">  
-	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
-    <link rel="stylesheet" href="../css/responsive.css">
+   <!--  <link rel="stylesheet" href="../css/responsive.css"> -->
 	
 	<!-- font -->
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
@@ -66,7 +66,7 @@ include '../php/job_list.php';
 	<div class="page">
 
 <div id="main_box">
-		<div style="display: inline-block; padding: 10px; ">
+		<div style="display: inline-block; padding: 10px; " id="people_list">
 
 			<div  class="people_layout">
 				<div class="people_header">Employers, you may chat </div>
@@ -591,6 +591,16 @@ function load_tapContent(data)
 						
 
 				}
+
+
+	$("btn-primary").click(function(){
+
+		var id= $(this).attr("data-id");
+
+
+		window.location.assign("job-details.php?id="+id);
+
+	})
 
 		
 	</script>
