@@ -24,7 +24,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Template Developed By ThemeRegion -->
-<?php  include "job_seeker/header.php" ?>
+<?php  include "header.php" ?>
 
 
 	<!-- signin-page -->
@@ -76,121 +76,15 @@
 	<!--/End:Preset Style Chooser-->
 	
     <!-- JS -->
-   <!-- footer -->
-	<footer id="footer" class="clearfix">
-		<!-- footer-top -->
-		<section class="footer-top clearfix">
-			<div class="container">
-				<div class="row">
-					<!-- footer-widget -->
-					<div class="col-sm-3">
-						<div class="footer-widget">
-							<h5>Quik Links</h5>
-							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">All Cities</a></li>
-								<li><a href="#">Help & Support</a></li>
-								<li><a href="#">Advertise With Us</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
-
-					<!-- footer-widget -->
-					<div class="col-sm-3">
-						<div class="footer-widget">
-							<h5>How to sell fast</h5>
-							<ul>
-								<li><a href="#">How to sell fast</a></li>
-								<li><a href="#">Membership</a></li>
-								<li><a href="#">Banner Advertising</a></li>
-								<li><a href="#">Promote your ad</a></li>
-								<li><a href="#">Jobs Delivers</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
-
-					<!-- footer-widget -->
-					<div class="col-sm-3">
-						<div class="footer-widget social-widget">
-							<h5>Follow us on</h5>
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook-official"></i>Facebook</a></li>
-								<li><a href="#"><i class="fa fa-twitter-square"></i>Twitter</a></li>
-								<li><a href="#"><i class="fa fa-google-plus-square"></i>Google+</a></li>
-								<li><a href="#"><i class="fa fa-youtube-play"></i>youtube</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
-
-					<!-- footer-widget -->
-					<div class="col-sm-3">
-						<div class="footer-widget news-letter">
-							<h5>Newsletter</h5>
-							<p>Jobs is Worldest leading Portal platform that brings!</p>
-							<!-- form -->
-							<form action="#">
-								<input type="email" class="form-control" placeholder="Your email id">
-								<button type="submit" class="btn btn-primary">Sign Up</button>
-							</form><!-- form -->			
-						</div>
-					</div><!-- footer-widget -->
-				</div><!-- row -->
-			</div><!-- container -->
-		</section><!-- footer-top -->
-
-		<div class="footer-bottom clearfix text-center">
-			<div class="container">
-				<p>Copyright &copy; <a href="#">Jobs</a> 2017. Developed by <a href="http://themeregion.com/">ThemeRegion</a></p>
-			</div>
-		</div><!-- footer-bottom -->
-	</footer><!-- footer -->
+   <?php  include "footer.php" ?>
 
 	
 	<!--/Preset Style Chooser--> 
 	<!--/End:Preset Style Chooser-->
 	
     <!-- JS -->
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript">
-
-    
-
-      $(".profile_list").click(function(){
-          $(".pro_nav_li").css("visibility", "visibile");
-          $("#pro_manu_list").slideToggle(1);
-          $(".pro_nav_li").slideToggle(1);
-      }); 
-    $(".navbar_brand").click(function(){
-          $(".nav_li").css("visibility", "visibile");
-          $("#manu_list").slideToggle(1);
-          $(".nav_li").slideToggle(1);
-     }); 
-
-     $("#pro_manu_list").mouseleave(function(){
-              $('#pro_manu_list').css("display", "none");
-     });          
-    
-  function click_search(){
-
-      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: initial;border-top-left-radius:3px ;   border-top-right-radius: 0px; border-bottom-left-radius: 3px;border-bottom-right-radius:0px ;';
-      document.getElementById('search_icon_2').style.cssText = 'display: initial;';
-      document.getElementById('search_icon_1').style.cssText = 'display: none;';
-
-  }
-  $("#sea_rch_input").focusout(function(){
-
-      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: hidden;border-top-left-radius:0px ;   border-top-right-radius: 3px; border-bottom-left-radius: 0px;border-bottom-right-radius:3px ;';
-      document.getElementById('search_icon_1').style.cssText = 'display: initial;';
-      document.getElementById('search_icon_2').style.cssText = 'display: none;';
-
-  });
-    document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
-</script>
 
   </body>
 
-<!-- Mirrored from demo.themeregion.com/jobs-updated/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->
+
 </html>

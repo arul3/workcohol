@@ -272,6 +272,7 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 	<?php 
 
 	include 'footer.php';
+
 	?>
 	<!--/End:Preset Style Chooser-->
 	
@@ -317,7 +318,10 @@ echo "var job_id=\"".$job_id."\";";
 
 		});  
 
-	</script>	
+	</script>
+
+	<?php include 'header_script.php'; ?>
+		
   </body>
 
 <!-- Mirrored from demo.themeregion.com/jobs-updated/job-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->

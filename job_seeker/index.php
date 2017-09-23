@@ -28,7 +28,7 @@ include '../php/job_list.php';
    	<meta name="description" content="">
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <!-- CSS -->
    <!--  <link rel="stylesheet" href="../css/bootstrap.min.css" > -->
     <link rel="stylesheet" href="../css/font-awesome.min.css">    
@@ -164,7 +164,9 @@ include '../php/job_list.php';
 
 					</div><!-- tab-pane -->
 
-					
+					<div id = "next_list_butt" >
+						<button class="btn-primary" id="more">load more</button> 
+					</div>
 
 
 				</div><!-- tab-content -->
@@ -173,8 +175,7 @@ include '../php/job_list.php';
 </div>
 
 
-<button class="btn-primary" id="more">load more</button> 
-<button class="btn-primary" id="more2">load more</button> 
+
 
 
 
@@ -248,6 +249,11 @@ include '../php/job_list.php';
     <!-- JS -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	
+    	$("#people").load("../php/employer_you_may_chat.php");
+    	
+    </script>
     
 <script type="text/javascript">
 			$(document).ready(function(){
@@ -393,14 +399,14 @@ orderby="salary_max";
 
 			$("#more").on("click",function (evt) {
 
-					alert("clicked mort");
+					
 					
 
 				
 
-					console.log("offset",offset,"order",orderby);
+					//console.log("offset",offset,"order",orderby);
 
-					offset +=1;
+					offset +=6;
 					
 				var formdt = new Object();
 
@@ -584,10 +590,14 @@ function load_tapContent(data)
 
 		window.location.assign("job-details.php?id="+id);
 
-	})
+	});
+
+
 
 		
 	</script>
+	
+	<?php include 'header_script.php'; ?>
 
   </body>
 

@@ -1,108 +1,101 @@
 .relocate
-    	{
-    		position: relative;
+        {
+            position: relative;
   
-    		padding-left: 5px;
-    		padding-right: 10px;
-    		margin-top: 3px;
+            padding-left: 5px;
+            padding-right: 10px;
+            margin-top: 3px;
 
     
 
-    	}
-    	.people_header
-    	{
-    		width: 300px;
-    		height: 40px;
-    		font-size: 18px;
-    		position: relative;
-    		left: 0px;
-
-
-    	}
-    	.people_layout
-    	{
-    		display: inline-block;
-    		padding: 2px;
-    		background-color: #F5F5F5;
-    		
-    		width: 373px;
-    		height: 1000px;
-    		
-            float: left;
+        }
+        .people_header
+        {
+            width: 100%;
+            height: 31px;
+            font-size: 18px;
+            position: relative;
+            left: 0px;
+            background-color: lavender;
+            padding-top: 8px;
+            text-align: center;
+            color: black;
+        }
+        .people_layout
+        {
+            display: inline-block;
+            padding: 0px;
+            background-color: #F5F5F5;
+            width: 100%;
+            height: 1000px;
             box-shadow: 0px 0px 2px;
+        }
+        
 
-    	}
-    	
+        .people
+        {
 
-    	.people
-    	{
+width: 100%;
 
-    		width: 373px;
-    		height: 500px;
-    		
-    	}
+height: 500px;
 
-    	.profile
-    	{
-    		width: 185px;
-    		height: 240px;
-    		
-    		float: left;
+padding-top: 5px;
 
-    	}
-    	.profile_img
-    	{
-    		width: 185px;
-    		height: 185px;
+}
 
-    		background-color: white;
-            
-         
-    	}
-    	.profile_area
-    	{
-    		width: 105px;
-    		height: 105px;
-    		border-radius: 50%;
-    		position: relative;;
-    		left: 40px;
-    		top: 16px;
-
-
-    		background-color: rgb(66,134,240);
-
-
-    	}
+        .profile
+        {
+            width: 45%;
+            height: 240px;
+            float: left;
+            padding: 2px 2%;
+        }
+        .profile_img
+        {
+            width: 185px;
+            height: 185px;
+            background-color: lightgray;
+        }
+        .profile_area
+        {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            position: relative;
+            left: 40px;
+            top: 16px;
+            background-color: transparent;
+        }
 
         .profile_area > img
 
         {
             border-radius: 50%;
-            border: 1px solid rgb(66,134,240);
+            border: 1px solid transparent;
+        }
+        .profile_img > .usr_info
+        {
+
+            width: 149px;
+
+            height: 29px;
+            position: relative;
+            top: 20px;
+
+            left: 16px;
+
+            
 
         }
-    	.profile_img > .usr_info
-    	{
+        .connect_button_area
+        {
 
-    		width: 149px;
+width: 104.6%;
 
-    		height: 29px;
-    		position: relative;
-    		top: 20px;
+height: 40px;
 
-    		left: 16px;
-
-    		
-
-    	}
-    	.connect_button_area
-    	{
-
-    		width: 184px;
-    		height: 40px;
-
-           
-    	}
+background-color: rgba(0,0,0,0.5);
+}
 
         .user_info > .name
 
@@ -142,25 +135,31 @@
     .connect_button_area>button    
 {
 
-            width: 100px;
-            height: 30px;
-    
-            position: relative;
-            color: white;
-    
-            top: 10px;
-            left: 45px;
-            background-color: rgb(66,134,240);
-            border: 0px;
-                        
+width: 100px;
 
-  }
+height: 30px;
+
+position: relative;
+
+color: white;
+
+top: 5px;
+
+cursor: pointer;
+
+left: 45px;
+
+background-color: rgb(66,134,240);
+
+border: 0px;
+}
 
         #main_box
         {
         
-            display: inline-flex;
-
+display: inline-flex;
+        
+width: 100%;
         }
         .toast
         {
@@ -186,9 +185,30 @@
             width: 100%;
             display: inline-flex;
             position: relative;
-            left: 60.5%;
+            left: 56.5%;
+            top: -6px;
+            margin-top: 0%;
         }
 
+div#people_list {
+    width: 30%;
+}
+.item-info {
+    width: 98%;
+    display: inline-flex;
+}
+
+.item-image-box {
+    width: 12%;
+}
+
+.ad-info {
+    width: 68%;
+}
+
+.job-ad-item .button {
+    width: 20%;
+}
 
 
 
@@ -206,6 +226,39 @@
 
 
 
+        div#next_list_butt {}
+
+div#next_list_butt {}
+
+div#next_list_butt {
+    width: 100%;
+    height: 65px;
+    text-align: center;
+}
+
+button#more {
+    padding: 10px 29px;
+    margin-right: 1%;
+    color: black;
+    background-color: #00a651;
+    border: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button#more:hover {background-color: #0072bc;color: whitesmoke;}
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+

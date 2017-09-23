@@ -5,15 +5,14 @@ body,html{
 #hea_der{
   width: 100%;
   height: 54px;
-  background-color: red;
+  background-color: rgba(38,62,74,1);
   margin: 0px;
   padding: 0px;
 }
 .con_tainer{
   width: 100%;
   height: 100%;
-  background-color: rgba(38,62,74,1);
-
+  background-color: rgba(0,20,60,1);
   display: inline-flex;
   border-bottom: 0.02px solid rgb(179,182,185);
 }
@@ -41,7 +40,14 @@ body,html{
   left: -40px;
 }
 @media (min-width: 871px){
-
+    #header_le_a {
+    width: 15%;
+    color: rgb(179,182,185);
+    height: 97%;
+    display: inline-grid;
+    text-align: center;
+    border-bottom: 1px solid transparent;
+}
 
       .header_left{
   width: 40%;
@@ -49,21 +55,25 @@ body,html{
    }   
 
 .header_cont{
-  width: 8%;
+  width: 100%;
   height: 100%;
   background-color: transparent;
   display: inline-flex;
-  margin: 0px 25%;
+  margin: 0px 20%;
+  text-align: center;
 }   
 .pro_li{
   background-color: transparent;
   font-size: 22px;
-  padding: 0px 40%;
+  padding: 0px 0%;
   width: 100%;
   text-align: center;
   margin: 0px 0px;
+  text-align: center;
+  display: inline-grid;
   height: 96%;
-  border-bottom: 1px solid transparent;
+  position: relative;
+  top: 20%;
 }
 
 
@@ -83,22 +93,32 @@ div#pro_manu_list_1 {
     z-index: 40;
 }
 div#pro_manu_list_2 {
-    width: 93px;
-    height: 194px;
+    height: 163px;
+    width: 200px;
     color: black;
     background-color: lightgray;
     border-radius: 4px;
     text-align: left;
     position: relative;
-    padding: 0px 156px 0px 0px;
-    right: 191px;
-    top: 29px;
+    padding: 17px 0px 0px 0px;
+    top: 2px;
     font-size: 15px;
     display: none;
+    overflow-x: hidden;
     z-index: 40;
+    float:right;
+    left:-2%;
 }
 }
 @media (max-width: 870px){
+  #header_le_a {
+    width: 20%;
+    color: rgb(179,182,185);
+    height: 97%;
+    display: inline-grid;
+    text-align: center;
+    border-bottom: 1px solid transparent;
+}
   .navbar_header {
     width: 20%;
     background-color: transparent;
@@ -128,14 +148,17 @@ div#pro_manu_list_2 {
     margin: 0px 0%;
 }
 .pro_li{
-  background-color: transparent;
-  font-size: 22px;
-  padding: 0px 4.1%;
-  width: 100%;
-  text-align: center;
-  margin: 0px 0px;
-  height: 96%;
-  border-bottom: 1px solid transparent;
+      background-color: transparent;
+    font-size: 22px;
+    padding: 0px 0%;
+    width: 100%;
+    text-align: center;
+    margin: 0px 0px;
+    text-align: center;
+    display: inline-grid;
+    height: 96%;
+    position: relative;
+    top: 20%;
 }
 .pro_li a {
     position: relative;
@@ -165,21 +188,23 @@ div#pro_manu_list_1 {
     z-index: 40;
 }
 div#pro_manu_list_2 {
-    width: 93px;
-    height: 194px;
+    height: 163px;
+    width: 200px;
     color: black;
     background-color: lightgray;
     border-radius: 4px;
     text-align: left;
     position: relative;
-    padding: 0px 156px 0px 0px;
-    right: 213px;
-    top: 19px;
+    padding: 17px 0px 0px 0px;
+    top: 2px;
     font-size: 15px;
     display: none;
     overflow-x: hidden;
     z-index: 40;
+    float:right;
+    left:-2%;
 }
+
 #logo_img {
     width: 31%;
 }
@@ -234,7 +259,7 @@ div#pro_manu_list_2 {
   height: 0px;
   font-size: 11px;
   position: relative;
-  top: -11px;
+  top: -18px;
   text-align: center;
 }
 #sea_rch_jabs{
@@ -402,7 +427,7 @@ ul.social_icons li.youtube:hover {
     padding: 6px 0px;
     color: black;
     padding-left: 21px;
-    padding-right: 135px;
+    padding-right: 133px;
 }
 
 a.profile_list {
@@ -410,7 +435,6 @@ a.profile_list {
     background-color: transparent;
     display: grid;
     color: rgb(179,182,185);
-    width: 8%;
     cursor: pointer;
 }
 
@@ -460,11 +484,10 @@ div#logo_img img {
 span#header_manu_name {
     margin-top: 14px;
 }
-.pro_li:hover {
-    border-bottom: 1px solid rgb(179,182,185);
+header_cout:hover {
 }
 
-div#pro_slide {width: 27px;}
+div#pro_slide {}
 
 .post_resume
 {
@@ -476,7 +499,18 @@ div#pro_slide {width: 27px;}
   box-shadow: 0px,0px,3px;
 }
 
+.pro_li i {
+    position: relative;
+    left: 0%;
+}
 
+.pro_li  span {
+}
+
+#header_le_a:hover {
+    border-bottom: 1px solid rgb(179,182,185);
+    color: whitesmoke;
+}
 
 
 

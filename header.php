@@ -1,32 +1,39 @@
 <?php
+session_start();
 
+if(isset($_SESSION['id'])) 
 
-if(!$_SESSION['id']) die();
-
-$type = $_SESSION['type'];
-
-if($type == "job_seeker")
 {
-  $path = "../job_seeker/index.php";
+    $type = $_SESSION['type'];
 
-  $dir ="../job_seeker/";
+  if($type == "job_seeker")
+  {
+        $path = "job_seeker/index.php";
+
+        header("Location:$path");
 
 
-}
+  }
 if($type == "employer")
 {
-  $path ="../job_employer/index.php";
+      $path ="job_employer/index.php";
 
-  $dir = "../job_employer/";
+      header("Location:$path");
 
 }
 
 
+  die();
+}
 
+
+
+//pending check_session function add    
 
 
 
 ?>
+
 
 
 
@@ -61,13 +68,7 @@ if($type == "employer")
 
         <div class="header_left">
             <div class="header_cont">
-
-           <?php   echo "<a href=\"$path\" id=\"header_le_a\">"  ?>
-
-
-                <div class="pro_li">
-
-                <i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
+              <a href="index.php" id="header_le_a"><div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
 
               <a href="resume.html" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
 
@@ -92,11 +93,7 @@ if($type == "employer")
                
                  <a href=""> <div class="pro_nav_li">Resume Edit</div> </a>
                  <a href="bookmark-list.php"> <div class="pro_nav_li">Book Marked</div> </a>
-                 <a href="../php/logout.php">
-                  
-                  <div class="pro_nav_li">Log out</div>
-
-                </a>
+                 <a> <div class="pro_nav_li">Log out</div></a>
           </div>
           
         </div>
@@ -119,11 +116,6 @@ if($type == "employer")
       </div><!-- container -->
     
   </div>
-
-
-
-
-
 
 
 

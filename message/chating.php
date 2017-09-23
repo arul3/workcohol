@@ -32,7 +32,6 @@ require 'mysql_cnct.php';
    	<meta name="description" content="">
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
-    <link rel="stylesheet" type="text/css" href="../testing.css">
     <link rel="stylesheet" type="text/css" href="chating.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../css/main.css">  
@@ -47,7 +46,7 @@ require 'mysql_cnct.php';
     <![endif]-->
     <!-- Template Developed By ThemeRegion -->
   <?php 
-  			include '../job_seeker/header.php';
+  			include 'header.php';
 
   ?>
 	
@@ -110,7 +109,7 @@ require 'mysql_cnct.php';
 
 					<div id="chat_window" style=""  >
 					
-						<button id="old_chats" onclick="old_msg();">old chats</button>
+					<!-- 	<button id="old_chats" onclick="old_msg();">old chats</button> -->
 						
 								<?php
 								$from  = 0;
@@ -145,6 +144,8 @@ require 'mysql_cnct.php';
 										if($n == $tot_cnt){
 											// update read message
 											if($from == 0)
+
+
 												$q3 = "INSERT into read_messages values (NULL,$user_id,$msg_id,$cu_id)";
 											else
 												$q3 = "UPDATE read_messages set msg_id = $msg_id where user_id = $user_id and cu_id = $cu_id";
@@ -190,7 +191,7 @@ require 'mysql_cnct.php';
 					</div>
 	<div id="text_box">
 		<!-- <input type="text" autofocus="true" name="chat_text" id="send_box"> -->
-		<textarea  name="chat_text" placeholder="Enter code"  wrap="hard" id="send_box" autofocus></textarea>
+		<textarea  name="chat_text" placeholder="Enter your message"  wrap="hard" id="send_box" autofocus></textarea>
 		<button id="send" onclick="send_msg()">Send</button>
 		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 	</div>
@@ -384,7 +385,7 @@ require 'mysql_cnct.php';
 										
 										$('#chat_window').prepend(tep_msg);
 									}else{
-										console.log('nod');
+										console.log('no new message');
 									}
 								}
 								load_pre = false;
@@ -403,7 +404,7 @@ require 'mysql_cnct.php';
 
 			});	
 }
-	
+	fst_msg_id = <?=$fst_msg_id?>;
 
 		function old_msg() {
 			$.ajax({
@@ -449,7 +450,7 @@ require 'mysql_cnct.php';
 							
 							$('#chat_window').prepend(tep_msg);
 						}else{
-							console.log('nod');
+							console.log('no message');
 						}
 						
 													
@@ -463,7 +464,7 @@ require 'mysql_cnct.php';
 		}
 	
 
-		
+	
 
 	</script>
 
@@ -498,16 +499,32 @@ require 'mysql_cnct.php';
 	  	get_new_messages();
     }
 
+      
+    //	document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
+</script>
+
+	<script type="text/javascript">
+
+		
+
       $(".profile_list").click(function(){
 		      $(".pro_nav_li").css("visibility", "visibile");
-		      $("#pro_manu_list").slideToggle(1);
+		      $("#pro_manu_list").css("visibility", "visibile");
+		      $("#pro_manu_list_2").slideToggle(1);
 		      $(".pro_nav_li").slideToggle(1);
       }); 
 	  $(".navbar_brand").click(function(){
-		      $(".nav_li").css("visibility", "visibile");
-		      $("#manu_list").slideToggle(1);
-		      $(".nav_li").slideToggle(1);
-     }); 					
+		      $(".header_left").css("visibility", "visibile");
+		      $(".header_left").slideToggle("slow");
+     }); 
+
+     $("#pro_slide").mouseleave(function(){
+              $("#pro_manu_list").css("visibility", "hidden");
+     });	
+     $(".profile_list").mouseleave(function(){
+              $("#pro_manu_list").slideToggle(1);
+              $(".pro_nav_li").slideToggle(1);
+     });				
     
   function click_search(){
 
@@ -523,8 +540,9 @@ require 'mysql_cnct.php';
       document.getElementById('search_icon_2').style.cssText = 'display: none;';
 
   });
-    //	document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
+    // document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
 </script>
+
   </body>
 
 <!-- Mirrored from demo.themeregion.com/jobs-updated/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:11 GMT -->

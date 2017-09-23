@@ -1,23 +1,50 @@
+<?php
+
+
+if(!$_SESSION['id']) die();
+
+$type = $_SESSION['type'];
+
+if($type == "job_seeker")
+{
+  $path = "../job_seeker/index.php";
+
+  $dir ="../job_seeker/";
+
+
+}
+if($type == "employer")
+{
+  $path ="../job_employer/index.php";
+
+  $dir = "../job_employer/";
+
+}
+
+
+
+
+
+
+?>
+
+
+
+
+
 <link rel="stylesheet" href="../css/testing.css">
-	<!-- header -->
-		</head>
+  <!-- header -->
+    </head>
 
     <body>
-
-
-
-    	
-
-	<!-- header -->
-		
-	             <div id="hea_der">
+               <div id="hea_der">
     <!-- navbar -->
     
       <div class="con_tainer">
         <!-- navbar-header -->
         <div id="logo">
           <div id="logo_img">
-            <a href="index.html"><img  src="img/techno1.png" alt="Workcohol" title="Workcohol" style="width: 35px;height: 35px;" ></a>
+            <a href="index.php"><img  src="img/techno1.png" alt="Workcohol" title="Workcohol" style="width: 35px;height: 35px;" ></a>
           </div>
           <div id="sea_rch_jabs">
             <span id="search_icon_1" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span><input type="text" name="" onclick="click_search();" id="sea_rch_input" placeholder=" Search"><span id="search_icon_2" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -36,23 +63,37 @@
 
         <div class="header_left">
             <div class="header_cont">
-              <div class="pro_li"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></a></div>
-              <div class="pro_li"><a href="job-list.html"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></a></div>
-              <div class="pro_li"><a href="details.html"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></a></div>
-              <div class="pro_li"><a href="chating.php"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></a></div>
+              <a href="index.php" id="header_le_a"><div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
+
+              <a href="resume.html" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
+
+              <a href="#" id="header_le_a"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></div></a>
+
+              <a href="../message/chating.php" id="header_le_a"><div class="pro_li"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></div></a>
               
+          <a class="profile_list" id="header_le_a">
           <div class="pro_li" id="pro_slide">
-          <a class="profile_list" ><i class="fa fa-user-circle" aria-hidden="true"></i><span id="header_manu_name">Profile</span></i></a>
-          <div id="pro_manu_list_1">
-            <div id="pro_lool_nav" ><i class="fa fa-caret-up" aria-hidden="true"></i></div>
-                 <a> <div class="pro_nav_li">Profile</div></a>
-                 <a> <div class="pro_nav_li">Post Jobs</div></a>
-                 <a> <div class="pro_nav_li">Posted Jobs</div></a>
-                 <a> <div class="pro_nav_li">Log out</div></a>
-          </div>
-      </div>
+          <i class="fa fa-user-circle" aria-hidden="true"></i><span id="header_manu_name">Profile</span></div></a>
+          
+      
+    
         
             </div>
+            <div id="pro_manu_list_2">
+
+                 <div id="pro_lool_nav" ><i class="fa fa-caret-up" aria-hidden="true"></i></div>
+
+                 <a href="#"> <div class="pro_nav_li">Profile</div></a>
+                 <a href="post-resume.html"> <div class="pro_nav_li">Post Job</div> </a>
+               
+                 <a href="#"> <div class="pro_nav_li">Applicant</div> </a>
+                 <a href="#"> <div class="pro_nav_li">Marked Applicant</div> </a>
+                 <a href="../php/logout.php">
+                  
+                  <div class="pro_nav_li">Log out</div>
+
+                </a>
+          </div>
           
         </div>
         <!-- /navbar-header -->
@@ -74,49 +115,10 @@
       </div><!-- container -->
     
   </div>
-  <!-- header -->
 
-	
-	
-	
+
+
+
+
     <!-- JS -->
-    <script src="js/jquery.min.js"></script>
-	<script type="text/javascript">
-
-		
-
-      $(".profile_list").click(function(){
-		      $(".pro_nav_li").css("visibility", "visibile");
-		      $("#pro_manu_list_1").slideToggle(1);
-		      $(".pro_nav_li").slideToggle(1);
-      }); 
-	  $(".navbar_brand").click(function(){
-		      $(".header_left").css("visibility", "visibile");
-		      $(".header_left").slideToggle("slow");
-     }); 
-
-     // $("#pro_manu_list").mouseleave(function(){
-     //          $("#pro_manu_list").slideToggle(1);
-     //          $(".pro_nav_li").slideToggle(1);
-     // });	
-     // $(".profile_list").mouseleave(function(){
-     //          $("#pro_manu_list").slideToggle(1);
-     //          $(".pro_nav_li").slideToggle(1);
-     // });				
     
-  function click_search(){
-
-      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: initial;border-top-left-radius:3px ;   border-top-right-radius: 0px; border-bottom-left-radius: 3px;border-bottom-right-radius:0px ;';
-      document.getElementById('search_icon_2').style.cssText = 'display: initial;';
-      document.getElementById('search_icon_1').style.cssText = 'display: none;';
-
-  }
-  $("#sea_rch_input").focusout(function(){
-
-      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: hidden;border-top-left-radius:0px ;   border-top-right-radius: 3px; border-bottom-left-radius: 0px;border-bottom-right-radius:3px ;';
-      document.getElementById('search_icon_1').style.cssText = 'display: initial;';
-      document.getElementById('search_icon_2').style.cssText = 'display: none;';
-
-  });
-    document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
-</script>

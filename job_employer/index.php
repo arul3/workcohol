@@ -27,25 +27,9 @@ if (!isset($_SESSION['id'])) {
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css">     
-    <link rel="stylesheet" href="../css/main.css">  
-	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
-    <link rel="stylesheet" href="../css/responsive.css">
-	
-	<!-- font -->
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Signika+Negative:400,300,600,700' rel='stylesheet' type='text/css'>
 
-	<!-- icons -->
-	<link rel="icon" href="images/ico/favicon.ico">	
-    <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.html">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">  
+    <link rel="stylesheet" href="../css/main.css">  
 
     <link rel="stylesheet" href="../css/additional.css">
 
@@ -270,6 +254,7 @@ if (!isset($_SESSION['id'])) {
 
     
 
+<?php include 'header_script.php'; ?>
 
   </body>
 

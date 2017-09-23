@@ -45,7 +45,21 @@ if(isset($_POST['email']))
 
 	if(check($email))
 {
-		header("Location: ../signin.html");
+
+
+		$sql = "SELECT * FROM user_info WHERE mail='$email'" ;
+
+		$result = query($sql);
+
+		$row = mysqli_fecth_array($result);
+
+		if($row['status'] =="active"){  header("Location: ../index.php");  }
+
+			if( $row['status'] == "not" ) {
+
+					header("Location: signing.php?step=reload");
+
+				}
 
 		die();
 
@@ -71,56 +85,21 @@ function confirm()
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
-  
-<!-- Mirrored from demo.themeregion.com/jobs-updated/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Theme Region">
-   	<meta name="description" content="">
+	<title></title>
 
-    <title>Jobs | Job Portal / Job Board HTML Template</title>
+<link rel="stylesheet" href="../css/main.css">
+ <link rel="stylesheet" href="../css/font-awesome.min.css">  
+<?php     include '../header.php';   ?>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css">     
-    <link rel="stylesheet" href="../css/main.css">  
-	<link id="preset" rel="stylesheet" href="css/presets/preset1.css">	
-    <link rel="stylesheet" href="../css/responsive.css">
-	
-	<!-- font -->
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Signika+Negative:400,300,600,700' rel='stylesheet' type='text/css'>
-
-	<!-- icons -->
-	<link rel="icon" href="images/ico/favicon.ico">	
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.html">
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/ico/apple-touch-icon-57-precomposed.png">
-    <!-- icons -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Template Developed By ThemeRegion -->
-  </head>
-  <body>
-	<!-- header -->
-	<!-- header -->
 
 	<section class="job-bg user-page">
 		<div class="container">
 			<div class="row text-center">
-				<!-- user-login -->			
-				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+				<!-- user-login -->	
+				<div id="not_show_win">		
+				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-4">
 					<div class="user-account job-user-account" id="sign-up">
 						
 						<form action="confirm_mail.php" method="post">
@@ -128,7 +107,7 @@ function confirm()
 											<input type="text" class="form-control" placeholder="Re-enter Email" name="email" required>
 							</div>
 							<div class="form-group">
-											<input type="text" class="form-control" placeholder="Confirm Password"
+											<input type="Password" class="form-control" placeholder="Confirm Password"
 											name="pass" required>
 							</div>
 							<button type="submit" class="btn" id="confirm">Confirm</button>
@@ -136,11 +115,9 @@ function confirm()
 						</form>	
 									
 					</div>
-								
-
-
-								
-							</div>				
+							
+							</div>	
+							</div>			
 					</div>
 				</div><!-- user-login -->			
 			</div><!-- row -->	
@@ -148,6 +125,7 @@ function confirm()
 	</section><!-- signup-page -->
 
 	<!-- footer -->
+	<!-- <?php     include '../footer.php';   ?> -->
 	<!-- footer -->
 	
 	<!--/Preset Style Chooser--> 
@@ -155,7 +133,6 @@ function confirm()
 	<!--/End:Preset Style Chooser-->
 	
     <!-- JS -->
-    <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
 	
@@ -192,58 +169,22 @@ if( $reload == "reload" )
 ?>
 
 
-
-
 <!DOCTYPE html>
-<html lang="en">
- 
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Theme Region">
-   	<meta name="description" content="">
+	<title></title>
 
-    <title>Jobs | Job Portal / Job Board HTML Template</title>
+<link rel="stylesheet" href="../css/main.css">
+ <link rel="stylesheet" href="../css/font-awesome.min.css">  
+<?php     include '../header.php';   ?>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css">     
-    <link rel="stylesheet" href="../css/main.css">  
-	<link id="preset" rel="stylesheet" href="css/presets/preset1.css">	
-    <link rel="stylesheet" href="../css/responsive.css">
-	
-	<!-- font -->
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Signika+Negative:400,300,600,700' rel='stylesheet' type='text/css'>
-
-	<!-- icons -->
-	<link rel="icon" href="images/ico/favicon.ico">	
-    <link rel="apple-touch-icon" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.html">
-    <link rel="apple-touch-icon" sizes="57x57" href="../images/ico/apple-touch-icon-57-precomposed.png">
-    <!-- icons -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Template Developed By ThemeRegion -->
-  </head>
-  <body>
-	<!-- header -->
-	<!-- header -->
 
 	<section class="job-bg user-page">
 		<div class="container">
 			<div class="row text-center">
-				<!-- user-login -->			
-				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+				<!-- user-login -->	
+				<div id="not_show_win">		
+				<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-4">
 					<div class="user-account job-user-account" id="sign-up">
 						
 						<form action="confirm_mail.php" method="post">
@@ -251,7 +192,7 @@ if( $reload == "reload" )
 											<input type="text" class="form-control" placeholder="Re-enter Email" name="email" required>
 							</div>
 							<div class="form-group">
-											<input type="text" class="form-control" placeholder="Confirm Password"
+											<input type="password" class="form-control" placeholder="Confirm Password"
 											name="pass" required>
 							</div>
 							<button type="submit" class="btn" id="confirm">Confirm</button>
@@ -259,11 +200,9 @@ if( $reload == "reload" )
 						</form>	
 									
 					</div>
-								
-
-
-								
-							</div>				
+							
+							</div>	
+							</div>			
 					</div>
 				</div><!-- user-login -->			
 			</div><!-- row -->	
@@ -271,6 +210,7 @@ if( $reload == "reload" )
 	</section><!-- signup-page -->
 
 	<!-- footer -->
+	<!-- <?php     include '../footer.php';   ?> -->
 	<!-- footer -->
 	
 	<!--/Preset Style Chooser--> 
@@ -278,7 +218,6 @@ if( $reload == "reload" )
 	<!--/End:Preset Style Chooser-->
 	
     <!-- JS -->
-    <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
 	
@@ -290,8 +229,15 @@ if( $reload == "reload" )
 	</script>	
   </body>
 
-<!-- Mirrored from demo.themeregion.com/jobs-updated/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->
+
 </html>
+
+
+
+
+
+
+
 
 <?php
 
