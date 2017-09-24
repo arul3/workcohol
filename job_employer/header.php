@@ -84,7 +84,7 @@ if($type == "employer")
                  <div id="pro_lool_nav" ><i class="fa fa-caret-up" aria-hidden="true"></i></div>
 
                  <a href="#"> <div class="pro_nav_li">Profile</div></a>
-                 <a href="post-resume.html"> <div class="pro_nav_li">Post Job</div> </a>
+                 <a href="post.php"> <div class="pro_nav_li">Post Job</div> </a>
                
                  <a href="#"> <div class="pro_nav_li">Applicant</div> </a>
                  <a href="#"> <div class="pro_nav_li">Marked Applicant</div> </a>

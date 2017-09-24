@@ -10,7 +10,7 @@ include 'main_function.php';
 
 if(!isset($_SESSION['id'])) die("invalid_session");
 
-if(isset($_POST)) die("not post method");
+if(!isset($_POST)) die("not post method");
 //VARIABLES
 
 $user_id = $_SESSION['id'];
@@ -51,7 +51,7 @@ $SQL = "INSERT INTO post_job (".
 		if ($res) 
 		{
 						
-						echo "updated success";
+						header("Location:../job_employer/");
 		}
 
 ?>

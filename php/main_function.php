@@ -57,7 +57,45 @@ $res = query($sql);
 }
 
 
+function post_detail($post_id)
+{
 
+	$sql = "SELECT * FROM post_job WHERE job_id='$post_id'";
+
+	$res = query($sql);
+
+	if($res)
+
+	$row = mysqli_fetch_array($res,MYSQLI_ASSOC);
+
+
+	return $row;
+
+
+}
+function validate_job($post_id,$id)
+{
+
+
+	$sql = "SELECT * FROM post_job WHERE job_id='$post_id' AND id='$id'";
+
+	$res = query($sql);
+
+	if($res)
+		
+	$num = mysqli_num_rows($res);
+
+	if($num >0)
+	{
+	return true;
+	}
+	else
+	{
+		return false;
+	}
+
+
+}
 
 
 
