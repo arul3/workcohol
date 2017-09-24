@@ -42,6 +42,8 @@ for ($i=0; $i< $num_row ; $i++) {
 
 		 		$job_id =$rows['job_id'];
 
+		 		$book_id = $rows['book_id'];
+
 		 		$sql2= "SELECT * FROM post_job WHERE job_id='$job_id'";
 
 		 		$res2= query($sql2);
@@ -50,7 +52,8 @@ for ($i=0; $i< $num_row ; $i++) {
 		 		{
 		 			$row = mysqli_fetch_array($res2,MYSQLI_ASSOC);
 
-		 			book_list($row);
+		 		global $booK_id;
+		 			book_list($row,$book_id);
 
 				 }	
 		 		
@@ -64,7 +67,7 @@ for ($i=0; $i< $num_row ; $i++) {
 ?>
 
 <?php
-function book_list($row)
+function book_list($row,$book_id)
 {
 
 ?>
@@ -125,8 +128,12 @@ function book_list($row)
 									</div><!-- ad-meta -->									
 								</div><!-- ad-info -->
 
-								<div class="close-icon">
-									<i class="fa fa-window-close" aria-hidden="true"></i>
+						<?php	echo "<div class=\"close-icon\" data-book_id=\"$book_id\">";  ?>
+
+
+							<?php		echo "<i class=\"fa fa-window-close delete\" data-book_id=\"$book_id\" aria-hidden=\"true\">";
+							?>
+									</i>
 								</div>
 								
 							</div><!-- item-info -->
