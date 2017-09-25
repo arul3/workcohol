@@ -87,7 +87,7 @@ if($type == "employer")
                  <a href="post-resume.html"> <div class="pro_nav_li">Post Resume</div> </a>
                
                  <a href=""> <div class="pro_nav_li">Resume Edit</div> </a>
-                 <a href="bookmark.php"> <div class="pro_nav_li">Book Marked</div> </a>
+                 <a href="bookmark-list.php"> <div class="pro_nav_li">Book Marked</div> </a>
                  <a href="../php/logout.php">
                   
                   <div class="pro_nav_li">Log out</div>

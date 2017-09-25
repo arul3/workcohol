@@ -15,13 +15,34 @@
             $q = "SELECT * from read_messages where user_id = $user_id and cu_id = $cu_id";
             $r = mysqli_query($dbc,$q);
             if($r){
+            	if(mysqli_num_rows($r) >  0){
             	$row = mysqli_fetch_array($r);
             	if($row != null)
             		$from = $row['msg_id'];
+                }
+                else{ 
+
+                		$q6 = "INSERT INTO `read_messages`(`id`, `user_id`, `msg_id`, `cu_id`) VALUES ('','$user_id','1','$cu_id')" ;
+                		$r6 = mysqli_query($dbc,$q6);
+                		if ($r6) {
+                			$q = "SELECT * from read_messages where user_id = $user_id and cu_id = $cu_id";
+				            $r = mysqli_query($dbc,$q);
+				            if($r){
+				            	
+				            	$row = mysqli_fetch_array($r);
+				            	if($row != null)
+				            		$from = $row['msg_id'];
+				                
+				        	}
+
+
+                  }
             }
+        }
             if($change_user == "true"){
-            	$from -= 10;
-            	$fst_msg_id = $from-9;
+            	$from -= 12;
+            	$fst_msg_id = $from+1;
+            	$output['fst_msg_id'] = $fst_msg_id;
             	$output['chage'] = "yes";
             }
 

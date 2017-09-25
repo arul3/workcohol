@@ -12,7 +12,7 @@ session_start();
 
 					require 'mysql_cnct.php';
                     $last_id = $_POST['last_id'] ;
-					$q1="SELECT * from message where ((user_1 = '$cu_id' and user_2 = '$user_id') or (user_2 = '$cu_id' and user_1 = '$user_id') ) and id >= $last_id-10 and id < $last_id order by id desc limit 10";
+					$q1="SELECT * from message where ((user_1 = '$cu_id' and user_2 = '$user_id') or (user_2 = '$cu_id' and user_1 = '$user_id') ) and id < $last_id order by id desc limit 10";
 					$r1=mysqli_query($dbc,$q1);
 					if($r1){
 						
