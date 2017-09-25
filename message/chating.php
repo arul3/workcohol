@@ -3,11 +3,11 @@
 
 session_start();
 
-if(empty($_SESSION['user_id'])){
+if(empty($_SESSION['id'])){
 
 	$_SESSION['user_id'] = 1;
 }$_SESSION['user_id'] = 1;
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['id'];
 
  
 if (isset($_GET['id'])) {
@@ -127,7 +127,6 @@ require 'mysql_cnct.php';
 		<!-- <input type="text" autofocus="true" name="chat_text" id="send_box"> -->
 		<textarea  name="chat_text" placeholder="Enter your message"  wrap="hard" id="send_box" autofocus></textarea>
 		<button id="send" onclick="send_msg()">Send</button>
-		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 	</div>
 	<div id="mirror_error">
 						<div id="text_logo_chat"><i class="fa fa-users" aria-hidden="true"></i><span id="init_our_mge">Chat your friends</span></div>
@@ -459,7 +458,7 @@ require 'mysql_cnct.php';
 	<script type="text/javascript">
 	function chating_id(frd_id,name){
 		$("#chat_person").css("display" , "inline-flex");
-				$("#text_box").css("display" , "inherit");
+				$("#text_box").css("display" , "inline-flex");
 				$("#chat_window").css("display" , "inherit");
 				$('#mirror_error').css("display" , "none");
       	$('#chat_window').html('');

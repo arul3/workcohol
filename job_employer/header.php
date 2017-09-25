@@ -67,7 +67,7 @@ if($type == "employer")
 
               <a href="resume.html" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
 
-              <a href="#" id="header_le_a"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></div></a>
+              <a id="header_le_a" class="notifi_click_fun"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></div></a>
 
               <a href="../message/chating.php" id="header_le_a"><div class="pro_li"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></div></a>
               
@@ -91,6 +91,21 @@ if($type == "employer")
                  <a href="../php/logout.php">
                   
                   <div class="pro_nav_li">Log out</div>
+
+                </a>
+          </div>
+          <div id="notification_list_2">
+
+                 
+
+                 <a href="#"> <div class="notifi_li">Profile</div></a>
+                 <a href="post.php"> <div class="notifi_li">Post Job</div> </a>
+               
+                 <a href="#"> <div class="notifi_li">Applicant</div> </a>
+                 <a href="#"> <div class="notifi_li">Marked Applicant</div> </a>
+                 <a href="../php/logout.php">
+                  
+                  <div class="notifi_li">Log out</div>
 
                 </a>
           </div>

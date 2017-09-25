@@ -27,7 +27,7 @@ if (!isset($_SESSION['id'])) {
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
-
+    <link rel="stylesheet" type="text/css" href="aditional_2.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">  
     <link rel="stylesheet" href="../css/main.css">  
 
@@ -214,7 +214,9 @@ if (!isset($_SESSION['id'])) {
 					<!-- ad-item -->	
 					</div><!-- tab-pane -->
 
-
+					<div id = "next_list_butt" >
+						<button class="btn-primary" id="more">load more</button> 
+					</div>
 
 				<!-- tab-pane -->
 				</div><!-- tab-content -->
@@ -222,9 +224,6 @@ if (!isset($_SESSION['id'])) {
 
 </div>
 
-
-<button class="btn-primary" id="more">load more</button> 
-<button class="btn-primary" id="more2">load more</button> 
 
 
 

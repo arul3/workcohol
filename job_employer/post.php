@@ -18,13 +18,10 @@ session_start();
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
    <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css">     
+    
+    <link rel="stylesheet" href="../css/font-awesome.min.css">   
     <link rel="stylesheet" href="../css/main.css">  
-	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
-    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="post_aditional.css">
 	
 	<!-- font -->
 	<!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
@@ -66,11 +63,7 @@ session_start();
 
 	<section class=" job-bg ad-details-page">
 		<div class="container">
-			<div class="breadcrumb-section">
-				<!-- breadcrumb -->
-										
-				<h2 class="title">Post Your Job</h2>
-			</div><!-- banner -->
+			
 
 			<div class="job-postdetails">
 				<div class="row">	
@@ -143,7 +136,7 @@ session_start();
 									
 									<div class="row form-group select-price">
 										<label class="col-sm-3 label-title">Salary<span class="required">*</span></label>
-										<div class="col-sm-9">
+										<div class="col-sm-9" id="divition_sub">
 											<label>$USD</label>
 											<input type="text" class="form-control" placeholder="Min" name="salary_min" required>
 											
@@ -180,7 +173,7 @@ session_start();
 										<label class="col-sm-3 label-title">Location<span class="required">*</span></label>
 
 
-										<div class="col-sm-9" >
+										<div class="col-sm-9" id="select_location">
 											
 											
 										<select name="country" class="form-control short" required>
@@ -224,7 +217,9 @@ session_start();
 									</div>
 
 								</div>
+								<div id="submit_butt">
 									<button type="submit" id="submit_btn" class="btn btn-primary">Post Your Job</button>
+									</div>
 
 								</div><!-- postdetails -->
 								

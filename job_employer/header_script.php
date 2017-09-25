@@ -2,16 +2,16 @@
 
     
 
+      $(".navbar_brand").click(function(){
+            $(".header_left").css("visibility", "visibile");
+            $(".header_left").slideToggle("slow");
+       }); 
       $(".profile_list").click(function(){
           $(".pro_nav_li").css("visibility", "visibile");
           $("#pro_manu_list_2").css("visibility", "visibile");
           $("#pro_manu_list_2").slideToggle(1);
           $(".pro_nav_li").slideToggle(1);
       }); 
-    $(".navbar_brand").click(function(){
-          $(".header_left").css("visibility", "visibile");
-          $(".header_left").slideToggle("slow");
-     }); 
      $("#pro_manu_list_2").mouseleave(function(){
               $("#pro_manu_list_2").hide();
               $(".pro_nav_li").hide();
@@ -19,6 +19,21 @@
      $("#pro_manu_list_2").mouseover(function(){
               $("#pro_manu_list_2").show();
               $(".pro_nav_li").show();
+      }); 
+     
+     $(".notifi_click_fun").click(function(){
+          $(".notifi_li").css("visibility", "visibile");
+          $("#notification_list_2").css("visibility", "visibile");
+          $("#notification_list_2").slideToggle(1);
+          $(".notifi_li").slideToggle(1);
+      }); 
+     $("#notification_list_2").mouseleave(function(){
+              $("#notification_list_2").hide();
+              $(".notifi_li").hide();
+      });       
+     $("#notification_list_2").mouseover(function(){
+              $("#notification_list_2").show();
+              $(".notifi_li").show();
       }); 
     
   function click_search(){

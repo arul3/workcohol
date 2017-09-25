@@ -1,0 +1,101 @@
+.row.form-group {}
+
+label.col-sm-3.label-title {
+    text-align: left;
+}
+
+.job-postdetails label {
+    text-align: left;
+}
+
+select.form-control {
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+select.form-control {
+    width: 105%;
+}
+
+select.form-control option {font-weight: normal;display: inline-flex;white-space: pre;min-height: 1.2em;padding: 0px 2px 1px;cursor: pointer;}
+
+input.form-control {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+textarea#textarea {}
+
+textarea#textarea {
+    width: 100%;
+    height: 90px;
+    padding: 10px 10px;
+    margin-bottom: -19px;
+}
+
+.col-sm-9.col-sm-offset-3 {
+    width: 58%;
+    text-align: right;
+    color: gray;
+}
+
+input.form-control {
+    border-radius: 5px;
+}
+
+.col-sm-9 {width: 34.8%;}
+
+button#submit_btn {
+    cursor: pointer;
+    width: 19%;
+    border-radius: 4px;
+    text-align: center;
+    height: 37px;
+}
+
+div#submit_butt {
+    width: 100%;
+    text-align: center;
+    padding: 32px 0px 0px 0px;
+}
+
+div#select_location {
+    width: 37.7%;
+    display: inline-flex;
+}
+
+div#select_location select {
+    margin-right: 17px;
+    padding: 10px 50px 10px 10px;
+}
+
+fieldset {
+    border: 0px;
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.breadcrumb-section {
+    width: 100%;
+}
+section.job-bg.ad-details-page {
+    padding: 0px;
+}
+
+div#divition_sub {
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
