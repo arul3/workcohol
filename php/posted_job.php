@@ -91,7 +91,7 @@ $job_id = $row['job_id'];
 									</div><!-- ad-meta -->									
 								</div><!-- ad-info -->
 								<div class="button">
-								    <button class="applicants_btn" data-id="9">Applicant</button>
+								    <button class="applicants_btn" data-id="">Applicant</button>
 
 								   	<?php	echo "<div class=\"edit_icon\" data-job_id=\"$job_id\">";  ?>
 
@@ -100,7 +100,7 @@ $job_id = $row['job_id'];
 								   </div>
 
 
-			        <?php		echo  "<div class=\"delete_icon\"  data-id=\"$job_id\" >";  ?>
+			        <?php		echo  "<div class=\"delete_icon\"  data-job_id=\"$job_id\" >";  ?>
 								   	<i class="fa fa-remove" style="font-size:32px"></i>
 								   	
 								   </div>

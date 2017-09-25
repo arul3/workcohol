@@ -18,6 +18,11 @@ if (!validate_job($post_id,$user))
 
 }
 
+
+$_SESSION['edit']=$post_id;
+
+
+
 ?>
 
 
@@ -92,7 +97,7 @@ if (!validate_job($post_id,$user))
 			<div class="job-postdetails">
 				<div class="row">	
 					<div class="col-md-8">
-						<form id="form" method="post" action="../php/posting.php">
+						<form id="form" method="post" action="../php/edit_posting.php">
 							<fieldset>
 								<div class="section postdetails">
 									<h4>Edit Posted Job<span class="pull-right">* Mandatory Fields</span></h4>
@@ -111,8 +116,8 @@ if (!validate_job($post_id,$user))
 
 												<option value="hardware" >Hardware Developer</option>
 
-											<option value="hardware" >Software Developer</option>
-											<option value="hardware" >Accounting Manager</option>
+											<option value="software" >Software Developer</option>
+											<option value="accounts" >Accounting Manager</option>
 										</select>
 
 										</div>

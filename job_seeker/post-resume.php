@@ -21,7 +21,9 @@ session_start();
     <link rel="stylesheet" href="../css/bootstrap.min.css" >
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css">     
+    <link rel="stylesheet" href="../css/slidr.css"> 
+
+        
     <link rel="stylesheet" href="../css/main.css">  
 	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
     <link rel="stylesheet" href="../css/responsive.css">
@@ -275,8 +277,8 @@ session_start();
 							<input type="submit" value="submit" class="btn" id="submit">
 						</form><!-- form -->
 						<div class="buttons">
-							<a href="#" class="btn" id="update" >Update Profile</a>
-							<a href="#" class="btn cancle">Cancle</a>
+							
+							<a href="index.php" class="btn cancle">Cancle</a>
 						</div>							
 					</div>
 				
@@ -366,7 +368,7 @@ session_start();
 	<script type="text/javascript">
 		$("#resume").submit(function(e){
 		
-    alert("Submitted");
+    
 });
 		$("#submit").click(function(){
 			var file = document.getElementById('upload-image-one').checkValidity();

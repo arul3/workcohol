@@ -394,7 +394,34 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+	
+		$(".delete_yes").click(function (argument) {
 
+
+			//var delete_id = id;
+
+			var formdt = new Object();
+
+			formdt.delete_id = id;
+
+			console.log(id);
+		
+				$.post("../php/delete_job.php",formdt,function (data,status) 
+				{
+					if (data == "success")
+					 {
+
+								window.location.assign("index.php");
+
+
+					}
+
+					
+
+
+				});
+
+		});
 
     </script>
 
