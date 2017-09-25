@@ -63,26 +63,7 @@ if (!isset($_SESSION['id'])) {
 
 				<div class="people">
 
-				<div class="profile">
-					<div class="profile_img"> 
-								<div class="profile_area">
-									<img src="../php/chat_avatar.php?id=1&w=200&h=200" width="105px" height="105px">
-								</div>
-					
-
-						<div class="usr_info">
-							
-							<div class="position">ARULKUMAR S</div>
-							<div class="place" >ZOHO Corparation</div>							
-						</div>
-
-
-
-					</div>
-						<div class="connect_button_area">
-							<button class="connect_button" data-id="1" data-validate="hasing" >connect</button>
-					 	</div>
-				</div>
+			
 
 
 
@@ -341,7 +322,7 @@ if (!isset($_SESSION['id'])) {
 
     	$(document).on('click','.applicants_btn',function (evt) {
 
-    		alert("djfj");
+    		alert("under develop");
 
     		$("#applicants-list").triger('click');
 
