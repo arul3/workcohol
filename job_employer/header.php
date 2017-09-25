@@ -63,7 +63,12 @@ if($type == "employer")
 
         <div class="header_left">
             <div class="header_cont">
-              <a href="index.php" id="header_le_a"><div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
+            <?php  echo  "<a href=\"$path\"  id=\"header_le_a\">";  ?>
+
+
+            <div class="pro_li">
+
+                <i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
 
               <a href="resume.html" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
 

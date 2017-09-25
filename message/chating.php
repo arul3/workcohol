@@ -38,15 +38,19 @@ require 'mysql_cnct.php';
 
     <!-- icons -->
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Template Developed By ThemeRegion -->
+
+	
+
+	<!-- Template Developed By -->
   <?php 
-  			include 'header.php';
+  			if($_SESSION['type'] == "job_seeker")
+
+  				include '../job_seeker/header.php';
+
+  			if($_SESSION['type'] == "employer")
+  				
+  				include '../job_employer/header.php';
+  			
 
   ?>
 	
@@ -72,18 +76,30 @@ require 'mysql_cnct.php';
 											
 											while( $row = mysqli_fetch_array($r1,MYSQLI_ASSOC)){
 												$fri_id = $row['cu_id'];
+												$q2 = "SELECT * FROM `user_info` WHERE id = $fri_id";
+												$r2 = mysqli_query($dbc,$q2);
+												if($r2){
+													if(mysqli_num_rows($r2) >  0){
+														$row2 = mysqli_fetch_array($r2,MYSQLI_ASSOC);
+			                                            $your_fri_name=$row2['name'];
+													
 
 						?>
-												<div  class="manu_fri_list" onclick="chating_id(<?=$fri_id?>,'Friend Name');">
-												<div class="fri_img">
+												<div  class="manu_fri_list" >
+												<div class="fri_img" onclick="chating_id(<?=$fri_id?>,'<?=$your_fri_name?>');">
 													<img src="../php/chat_avatar.php?id=1&w=150&h=150">
 												</div>
-												<div class="fri_name">
-													<span id="tit_list_name">Friend Name</span><!-- <?=$your_fri_name?> -->
+												<div class="fri_name" onclick="chating_id(<?=$fri_id?>,'<?=$your_fri_name?>');">
+													<span id="tit_list_name"><?=$your_fri_name?></span><!-- <?=$your_fri_name?> -->
 												</div>
-												<i class="fa fa-times" aria-hidden="true"></i>
+												<i class="fa fa-times" aria-hidden="true" onclick="cansal_friend(<?=$fri_id?>);" id="remove_fun"
+
+
+											<?php	echo  "data-fir_id=\"$fri_id\"></i>";   ?>
 												</div>
 												<?php
+												}
+												}
 														//echo "$your_fri_name<br>";
 											}
 										}
@@ -105,89 +121,14 @@ require 'mysql_cnct.php';
 						<div id="chat_our_img" ><img src="../php/chat_avatar.php?id=1&w=150&h=150" style="width: 30px;height: 30px;"></div>
 						<span id="our_name">Y</span>
 						<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+						<div id="go_link"></div>
 					</div>
 
 					<div id="chat_window" style=""  >
 					
-					<!-- 	<button id="old_chats" onclick="old_msg();">old chats</button> -->
+				<!-- 	<button id="old_chats" onclick="old_msg();">old chats</button> -->
 						
-								<?php
-								$from  = 0;
-                                $q = "SELECT * from read_messages where user_id = $user_id  and cu_id = $cu_id";
-                                $r = mysqli_query($dbc,$q);
-                                if($r){
-                                	$row = mysqli_fetch_array($r);
-                                	if($row != null)
-                                		$from = $row['msg_id'];
-                                }
-
-                                $n = 0;
-                                $fst_msg_id = 0;
-								$q1="SELECT * from message where ((user_1 = '$cu_id' and user_2 = '$user_id') or (user_2 = '$cu_id' and user_1 = '$user_id') ) and id >= ". ( $from - 10 )." order by id asc";
-								$r1=mysqli_query($dbc,$q1);
-								if($r1){
 								
-									
-									$tot_cnt = mysqli_num_rows($r1);
-									while( $row = mysqli_fetch_array($r1,MYSQLI_ASSOC)){
-							            $msg_text = $row['msg_text'];
-										$my_userid = $row['user_1'];
-										$frd_id = $row['user_2'];
-										$msg_id = $row['id'];
-										$da_time = $row['date_send'];
-										$send_date=date_create($da_time);
-										$time_da = date_format($send_date,"d M Y") ;
-										$n++;
-										if($n == 1){
-											$fst_msg_id = $row['id'];
-										}
-										if($n == $tot_cnt){
-											// update read message
-											if($from == 0)
-
-
-												$q3 = "INSERT into read_messages values (NULL,$user_id,$msg_id,$cu_id)";
-											else
-												$q3 = "UPDATE read_messages set msg_id = $msg_id where user_id = $user_id and cu_id = $cu_id";
-											$r3 = mysqli_query($dbc,$q3);
-											
-										}								
-										
-										$color = ($msg_id == $from+1) ? "<div id=\"new_mess_line\"><div><hr></div><span>NEW MESSAGE</span><div><hr></div></div>" : "" ;
-											 	echo $color;
-											 
-										 	
-										$my_msg_pane = ($my_userid == $user_id) ? "right" : "left";
-                                        $alt_msg_pane = ($my_userid == $user_id) ? "<div id=\"joined_mess1\">" : "<div id=\"joined_mess2\">";
-										$fri_mess_alt = ($my_userid == $user_id) ? "<div id=\"mess1\"><div id=\"mess_age1\">" : "<div id=\"mess2\"><div id=\"mess_age2\">";
-										$img_fri1 = ($my_userid == $user_id) ? "inherit;" : "none;";
-										$img_fri2 = ($my_userid == $user_id) ? "none;" : "inherit;";
-
-										?>
-										
-
-										
-
-										<div id="chat_resend" style="word-wrap: break-word;text-align: <?=$my_msg_pane?>;"><?=$alt_msg_pane?>
-											 <div class="fir_img2" style="display: <?=$img_fri2?>"><img src="../php/chat_avatar.php?id=1&w=150&h=150" ></div> <?=$fri_mess_alt?>
-											<span style=""><?php echo nl2br(htmlentities($msg_text)); ?><div id="da_tes"><?=$time_da?></div> </span>
-										</div>
-									</div>
-										<div class="fir_img1" style="display: <?=$img_fri1?>"><img src="../php/chat_avatar.php?id=1&w=150&h=150" ></div>
-									</div>
-									</div>
-									<?php											
-									
-								
-									}
-
-
-								}
-								else {
-							           echo mysqli_error($dbc);
-							 }
-							
-						?>
 					</div>
 	<div id="text_box">
 		<!-- <input type="text" autofocus="true" name="chat_text" id="send_box"> -->
@@ -195,6 +136,9 @@ require 'mysql_cnct.php';
 		<button id="send" onclick="send_msg()">Send</button>
 		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 	</div>
+	<div id="mirror_error">
+						<div id="text_logo_chat"><i class="fa fa-users" aria-hidden="true"></i><span id="init_our_mge">Chat your friends</span></div>
+					</div>
 
 	
 
@@ -325,14 +269,14 @@ require 'mysql_cnct.php';
 				type : 'post',
 				dataType : 'json',
 				success : function(res){
-					console.log(res);
+					// console.log(res);
 					//refresh ajax funcition
 					$('#send_box').val("");
 					document.getElementById("send_box").focus();
 					get_new_messages();
 				},
 				error :function(err){
-					console.log(err);
+					// console.log(err);
 				}
 
 			});
@@ -365,7 +309,8 @@ require 'mysql_cnct.php';
 							var msg_data = data.chat_data;
 							for(i in msg_data){
 								var new_msg = msg_data[i];
-								var msg_text =  new_msg.msg ;           var time_da = data.send_date ;
+								var msg_text =  new_msg.msg ; 
+								var time_da = data.send_date ;
 								var msg_pane = (new_msg.my_msg == true) ? "right" : "left";
 
 								        var alt_msg_pane = (new_msg.my_msg == true) ? "<div id=\"joined_mess1\">" : "<div id=\"joined_mess2\">";
@@ -381,11 +326,12 @@ require 'mysql_cnct.php';
 								if(load_pre == true){
 									if (msg_data.length > 0) {
 										$("#old_chats").remove();
-										var tep_msg = '<button id="old_chats" onclick="old_msg()">old chats</button>';
+										var fri_iid = data.fst_msg_id;
+										var tep_msg = '<button id="old_chats" onclick="old_msg('+fri_iid+')">old chats</button>';
 										
 										$('#chat_window').prepend(tep_msg);
 									}else{
-										console.log('no new message');
+										// console.log('no new message');
 									}
 								}
 								load_pre = false;
@@ -399,24 +345,24 @@ require 'mysql_cnct.php';
 					
 				},
 				error :function(err){
-					console.log(err);
+					// console.log(err);
 				}
 
 			});	
 }
-	fst_msg_id = <?=$fst_msg_id?>;
+	// fst_msg_id = 10;
 
-		function old_msg() {
+		function old_msg(fri_id) {
 			$.ajax({
 				url : 'old_chats.php',
 				data : {
 					cu_id : c_id,
-					last_id : fst_msg_id
+					last_id : fri_id
 				},
 				type : 'post',
 				dataType : 'json',
 				success : function(res){
-					console.log(res);
+					// console.log(res);
 					var data = res;
 					if(data.error == false){
 
@@ -446,24 +392,58 @@ require 'mysql_cnct.php';
 						}
 						if (msg_data.length > 0) {
 							$("#old_chats").remove();
-							var tep_msg = '<button id="old_chats" onclick="old_msg()">old chats</button>';
+							var tep_msg = '<button id="old_chats" onclick="old_msg('+fst_msg_id+');">old chats</button>';
 							
 							$('#chat_window').prepend(tep_msg);
 						}else{
-							console.log('no message');
+							// console.log('no message');
 						}
 						
 													
 					}
 				},
 				error :function(err){
-					console.log(err);
+					// console.log(err);
 				}
 
 			});	
 		}
 	
+				function cansal_friend(cansal_id){
 
+
+    			$.ajax({
+				url : 'remove_frid.php',
+				data : {
+					
+					fri_id : cansal_id
+				
+				},
+				
+				type : 'post',
+
+				dataType : 'json',
+
+				success : function(res){
+				
+					$(this).empty();
+				
+				},
+				error :function(err){
+					
+					 console.log(err.responseText);
+				
+				}  			
+
+
+                });
+    			
+
+
+}
+
+
+			
 	
 
 	</script>
@@ -474,12 +454,10 @@ require 'mysql_cnct.php';
 			var frie_id = <?=$cu_id?>;
 			if (frie_id == 0) {
 
+				$("#chat_person").css("display" , "none");
 				$("#text_box").css("display" , "none");
-				$("#old_chats").css("display" , "none");
-				$("#chat_window").css("height" , "100%");
-				var temp_init = '<div id="text_logo_chat"><i class="fa fa-users" aria-hidden="true"></i><span id="init_our_mge">Chat your friends</span></div>';
-				$('#chat_window').html(temp_init);
-
+				$("#chat_window").css("display" , "none");
+				$('#mirror_error').css("display" , "inherit");
 			}
 
 
@@ -487,61 +465,45 @@ require 'mysql_cnct.php';
 	
 	<script type="text/javascript">
 	function chating_id(frd_id,name){
+		$("#chat_person").css("display" , "inline-flex");
+				$("#text_box").css("display" , "inherit");
+				$("#chat_window").css("display" , "inherit");
+				$('#mirror_error').css("display" , "none");
       	$('#chat_window').html('');
-      	$("#chat_window").css("height" , "54%");
 		$('#our_name').html(name);
 	   	c_id = frd_id;
 	   	load_pre  = true;   
-	   	$("#text_box").css("display" , "inline-flex");
-	   	$("#text_box").css("height" , "98px");
-		$("#old_chats").css("display" , "inherit");
 		document.getElementById("send_box").focus();
 	  	get_new_messages();
     }
-
+    
       
     //	document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
 </script>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 
-		
 
-      $(".profile_list").click(function(){
-		      $(".pro_nav_li").css("visibility", "visibile");
-		      $("#pro_manu_list").css("visibility", "visibile");
-		      $("#pro_manu_list_2").slideToggle(1);
-		      $(".pro_nav_li").slideToggle(1);
-      }); 
-	  $(".navbar_brand").click(function(){
-		      $(".header_left").css("visibility", "visibile");
-		      $(".header_left").slideToggle("slow");
-     }); 
 
-     $("#pro_slide").mouseleave(function(){
-              $("#pro_manu_list").css("visibility", "hidden");
-     });	
-     $(".profile_list").mouseleave(function(){
-              $("#pro_manu_list").slideToggle(1);
-              $(".pro_nav_li").slideToggle(1);
-     });				
-    
-  function click_search(){
 
-      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: initial;border-top-left-radius:3px ;   border-top-right-radius: 0px; border-bottom-left-radius: 3px;border-bottom-right-radius:0px ;';
-      document.getElementById('search_icon_2').style.cssText = 'display: initial;';
-      document.getElementById('search_icon_1').style.cssText = 'display: none;';
+    $(".fa-times").click(function(){
 
-  }
-  $("#sea_rch_input").focusout(function(){
+    	
 
-      document.getElementById('sea_rch_input').style.cssText = 'width: 87%;overflow: hidden;border-top-left-radius:0px ;   border-top-right-radius: 3px; border-bottom-left-radius: 0px;border-bottom-right-radius:3px ;';
-      document.getElementById('search_icon_1').style.cssText = 'display: initial;';
-      document.getElementById('search_icon_2').style.cssText = 'display: none;';
+    	th = $(this).parent();
+    	th.remove();
+    	        $("#chat_person").css("display" , "none");
+				$("#text_box").css("display" , "none");
+				$("#chat_window").css("display" , "none");
+				$('#mirror_error').css("display" , "inherit");
+    	
 
-  });
-    // document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
+
+    });
 </script>
+
+ 
+<?php include '../job_seeker/header_script.php';  ?>
 
   </body>
 

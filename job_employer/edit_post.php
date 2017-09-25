@@ -18,10 +18,39 @@ if (!validate_job($post_id,$user))
 
 }
 
+// variables need
 
 $_SESSION['edit']=$post_id;
 
+$full_time = "";
 
+
+
+$part_time = "";
+
+
+
+$freelance = "";
+
+
+//1			if($post['type']=="contract")
+		
+$contract = "";
+
+$hardware ="";
+
+//										if($post['category']=="software")
+
+$software="";
+
+												//if($post['category']== "accounts")
+
+$accounts = "";
+
+$beginner ="";
+$beginner ="";
+											
+$top_level ="";
 
 ?>
 
@@ -111,13 +140,32 @@ $_SESSION['edit']=$post_id;
 										<div class="col-sm-9">
 											
 										<select name="category" class="form-control"  required>
-												<option value="">Select Category</option>
+											
 									
+									<?php
 
-												<option value="hardware" >Hardware Developer</option>
+									if($post['category']=="hardware")
 
-											<option value="software" >Software Developer</option>
-											<option value="accounts" >Accounting Manager</option>
+											$hardware ="selected";
+
+										if($post['category']=="software")
+
+													$software="selected";
+
+												if($post['category']== "accounts")
+
+														$accounts = "selected";
+
+										
+										echo	"	<option value=\"hardware\" $hardware>Hardware Developer</option>";
+
+
+										echo 	"<option value=\"software\" $software>Software Developer</option>
+											<option value=\"accounts\" $accounts>Accounting Manager</option>";
+
+
+											?>
+
 										</select>
 
 										</div>
@@ -140,24 +188,70 @@ $_SESSION['edit']=$post_id;
 									<div class="row form-group">
 										<label class="col-sm-3">Job Type<span class="required">*</span></label>
 										<div class="col-sm-9 user-type">
-											<input type="radio" name="job_type" value="full-time" id="full-time" checked> <label for="full-time">Full Time</label>
-											<input type="radio" name="job_type" value="part-time" id="part-time"> <label for="part-time">Part Time</label>
-											<input type="radio" name="job_type" value="freelance" id="freelance"> <label for="freelance">Freelance</label>	
-											<input type="radio" name="job_type" value="contract" id="contract"> <label for="contract">Contract</label>	
+											
+
+<?php
+
+			if($post['type']=="full-time")
+				$full_time = "checked";
+
+
+
+			if($post['type']=="part-time")
+				$part_time = "checked";
+
+
+			if($post['type']=="freelance")
+				$freelance = "checked";
+
+
+			if($post['type']=="contract")
+				$contract = "checked";
+
+
+							echo "<input type=\"radio\" name=\"job_type\" value=\"full-time\" id=\"full-time\" $full_time> <label for=\"full-time\">Full Time</label>
+
+									<input type=\"radio\" name=\"job_type\" value=\"part-time\" id=\"part-time\" $part_time> <label for=\"part-time\">Part Time</label>
+
+
+											<input type=\"radio\" name=\"job_type\" value=\"freelance\" id=\"freelance\" $freelance> <label for=\"freelance\">Freelance</label>
+
+											<input type=\"radio\" name=\"job_type\" value=\"contract\" id=\"contract\" $contract> <label for=\"contract\">Contract</label> ";
+
+?>
 										</div>
 									</div>
 									<div class="row form-group">
-										<label class="col-sm-3 label-title">Title for your jonb<span class="required">*</span></label>
+										<label class="col-sm-3 label-title">Title for your job<span class="required">*</span></label>
 										<div class="col-sm-9">
-											<input type="text" class="form-control" placeholder="ex, Human Resource Manager" name="job_title" required>
+											<?php
 
+											$title = $post['title'];
+
+
+											echo "<input type=\"text\" class=\"form-control\" placeholder=\"ex, Human Resource Manager\" name=\"job_title\" value=\"$title\" required>";
+
+
+											?>
 
 										</div>
-									</div>					
+									</div>	
+
 									<div class="row form-group item-description">
 										<label class="col-sm-3 label-title">Description<span class="required">*</span></label>
 										<div class="col-sm-9">
-											<textarea class="form-control" id="textarea" placeholder="Write few lines about your jobs" rows="8" name="description" required></textarea>		
+
+						<?php										
+
+							$des = $post['description'];
+
+									
+									echo "<textarea class=\"form-control\" id=\"textarea\" placeholder=\"Write few lines about your jobs\" rows=\"8\" name=\"description\" value=\"$des\" required></textarea>";			
+
+
+
+						?>
+
 										</div>
 									</div>
 									<div class="row characters">
@@ -170,11 +264,26 @@ $_SESSION['edit']=$post_id;
 										<label class="col-sm-3 label-title">Salary<span class="required">*</span></label>
 										<div class="col-sm-9">
 											<label>$USD</label>
-											<input type="text" class="form-control" placeholder="Min" name="salary_min" required>
+
+									<?php											
 											
+											$min = $post['salary_min'];
+
+											echo "
+												<input type=\"text\" class=\"form-control\" placeholder=\"Min\" name=\"salary_min\" 
+												value = \"$min\"required>";
+									?>
 											<span>-</span>
-											<input type="text" class="form-control" placeholder="Max" name="salary_max" required>
-											
+
+
+									<?php
+										
+										$max = $post['salary_max'];
+
+										echo "<input type=\"text\" class=\"form-control\" placeholder=\"Max\" name=\"salary_max\" value=\"$max\"required>
+										";
+
+										?>											
 										</div>
 									</div>	
 
@@ -187,10 +296,23 @@ $_SESSION['edit']=$post_id;
 										<div class="col-sm-9">
 											
 										<select name="exprience" class="form-control"  required>
-												<option value="beginner">BEGINNER</option>
-									
+											
+										<?php
 
-												<option value="mid-exprience" >MID-Exprience</option>
+											if($post['exprience']=="beginner")
+												$beginner ="selected";
+											if($post['exprience']=="mid-exprience")
+												$beginner ="selected";
+											if($post['exprience']=="top-level")
+												$top_level ="selected";
+											
+
+
+										echo	"<option value=\"beginner\" $beginner>BEGINNER</option><option value=\"mid-exprience\" $mid_exprience>MID-Exprience</option>
+											<option value=\"top-level\" $top_level>Top-Level</option>";
+										
+										?>
+
 										</select>
 
 										</div>
@@ -209,19 +331,52 @@ $_SESSION['edit']=$post_id;
 											
 											
 										<select name="country" class="form-control short" required>
-												<option value="america">COUNTRY</option>
-									
+												<option value="">COUNTRY</option>
+									<?php
 
-												<option value="india" >INDIA</option>
-											</select>
+											if ($post['country']== "india") 
+												$india = "selected";
 
+												
+											
+
+												echo "<option value=\"india\" $india>INDIA</option>
+											</select>";
+
+									?>
 										
 										<select name="state" class="form-control short" required>
 
 										         <option value="">STATE </option>
-									
+									<?php
 
-										         <option value="india" >TAMILNADU</option>
+										$tamilnadu="";
+										$telungana="";
+										$Kerala ="";
+
+										if($post['state']=="Tamilnadu")
+											$tamilnadu ="selected";
+
+											if($post['state']=="Telungana")
+
+												$telungana ="selected";
+
+												if($post['state']=="Kerala")
+
+														$Kerala="selected";
+
+
+										echo	"<option value=\"Tamilnadu\" $tamilnadu>TAMILNADU</option>
+										         <option value=\"Telungana\" $telungana>Telungana</option>
+										         <option value=\"Kerala\" $Kerala>KERALA</option>";
+
+
+
+
+									?>
+
+										         
+
 										</select>
 
 										
@@ -235,7 +390,7 @@ $_SESSION['edit']=$post_id;
 									<div class="row form-group brand-name">
 										<label class="col-sm-3 label-title">Expire Date<span class="required">*</span></label>
 										<div class="col-sm-9">
-											<input type="text" class="form-control" placeholder="Set a date or leave blank to automatically use the Expired date" name="expire" required>
+											<input type="date" class="form-control" placeholder="Set a date or leave blank to automatically use the Expired date" name="expire" required>
 										</div>
 									</div>
 
@@ -245,7 +400,15 @@ $_SESSION['edit']=$post_id;
 									<div class="row form-group brand-name">
 										<label class="col-sm-3 label-title">Notification E-mail<span class="required">*</span></label>
 										<div class="col-sm-9">
-											<input type="text" name="notify_mail"  class="form-control" placeholder="Email to receive application notification. Leave it blank to use your account email.">
+									<?php
+
+									$mail =$post['notification_mail'];
+
+										echo "<input type=\"email\" name=\"notify_mail\"  class=\"form-control\" placeholder=\"Email to receive application notification. Leave it blank to use your account email.\" value=\"$mail\">";
+
+
+
+									?>
 									</div>
 
 								</div>
@@ -286,7 +449,15 @@ $_SESSION['edit']=$post_id;
     <script src="../js/bootstrap.min.js"></script>
     
 
-    
+    <script type="text/javascript">
+    		
+<?php     echo "var desc = \"$des\" ";  ?>
+
+		document.getElementById('textarea').innerHTML = desc;
+
+
+
+    </script>
 	
 	<script type="text/javascript">
 		

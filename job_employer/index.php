@@ -423,6 +423,14 @@ window.onclick = function(event) {
 
 		});
 
+		$(".delete_no").click(function(){
+
+
+		$("#close_modal").click();
+
+
+		});
+
     </script>
 
 
