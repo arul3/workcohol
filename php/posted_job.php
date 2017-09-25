@@ -31,6 +31,10 @@ for ($i=0; $i <$num_rows ; $i++) {
 
 $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 
+
+$job_id = $row['job_id'];
+
+
 ?>
 
 
@@ -53,14 +57,11 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 										<?php echo $row['title'] ?>
 									
 
-									</a> @ <a href="#">
+									</a> 
 
 
 
-										<?php echo  $row['company_name']; ?>
-											
-											
-										</a></span>
+											</span>
 									<div class="ad-meta">
 										<ul>
 											<li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -90,8 +91,19 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
 									</div><!-- ad-meta -->									
 								</div><!-- ad-info -->
 								<div class="button">
-								   <?php 	echo "<button  class=\"btn btn-primary apply\" data-id=\"".$row['job_id']."\"> Edit </button>";
-								   ?>
+								    <button class="applicants_btn" data-id="">Applicant</button>
+
+								   	<?php	echo "<div class=\"edit_icon\" data-job_id=\"$job_id\">";  ?>
+
+
+								   	<i class="fa fa-edit" style="font-size:28px"></i>
+								   </div>
+
+
+			        <?php		echo  "<div class=\"delete_icon\"  data-job_id=\"$job_id\" >";  ?>
+								   	<i class="fa fa-remove" style="font-size:32px"></i>
+								   	
+								   </div>
 
 								</div>
 							</div><!-- item-info -->

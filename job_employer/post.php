@@ -1,4 +1,10 @@
-+<!DOCTYPE html>
+<?php
+session_start();
+
+?>
+
+
+<!DOCTYPE html>
 <html lang="en">
   
 <!-- Mirrored from demo.themeregion.com/jobs-updated/post.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->
@@ -49,19 +55,20 @@
 
     	}
     </style>
-  </head>
-  <body>
+
+
+<?php include 'header.php'; ?>
+
+
+
 	<!-- header -->
-	><!-- header -->
+	<!-- header -->
 
 	<section class=" job-bg ad-details-page">
 		<div class="container">
 			<div class="breadcrumb-section">
 				<!-- breadcrumb -->
-				<ol class="breadcrumb">
-					<li><a href="index-2.html">Home</a></li>
-					<li>Job Post </li>
-				</ol><!-- breadcrumb -->						
+										
 				<h2 class="title">Post Your Job</h2>
 			</div><!-- banner -->
 
@@ -321,6 +328,9 @@
 
 
 	</script>	
+
+
+	<?php include 'header_script.php'; ?>
   </body>
 
 <!-- Mirrored from demo.themeregion.com/jobs-updated/post.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Sep 2017 09:35:49 GMT -->

@@ -13,6 +13,9 @@ if(!isset($_SESSION['id'])) die("invalid_session");
 if(!isset($_POST)) die("not post method");
 //VARIABLES
 
+
+$job_id = $_SESSION['edit'];
+
 $user_id = $_SESSION['id'];
 
 
@@ -42,9 +45,11 @@ $note_mail = $_POST['notify_mail'];
 $name = user_name($user_id);
 
 
-$SQL = "INSERT INTO post_job (".
-		"id,category,type,title,description,country,state,salary_min,salary_max,exprience,notification_mail,company_name)VALUES ".
-		"('$user_id','$category','$type','$title','$description','$country','$state','$salary_min','$salary_max','$exprience','$note_mail','$name')";
+
+
+
+$SQL = "UPDATE post_job SET id ='$user_id', category='$category', type='$type' ,title='$title',description='$description',country ='$country' ,state='$state',salary_min='$salary_min',salary_max = '$salary_max',exprience = '$exprience',notification_mail='$note_mail',company_name='$name' WHERE job_id='$job_id'";
+
 
 		$res = query($SQL);
 
@@ -52,6 +57,16 @@ $SQL = "INSERT INTO post_job (".
 		{
 						
 						header("Location:../job_employer/");
+
 		}
+
+
+
+
+
+
+
+
+
 
 ?>

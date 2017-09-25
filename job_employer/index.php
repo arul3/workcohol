@@ -34,6 +34,11 @@ if (!isset($_SESSION['id'])) {
     <link rel="stylesheet" href="../css/additional.css">
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/employer.css">
+
+
 
 
 <?php  include 'header.php' ?>
@@ -126,7 +131,7 @@ if (!isset($_SESSION['id'])) {
 					 <!-- Nav tabs -->      
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation"><a href="#hot-jobs" data-toggle="tab"
-							id="posted-list">Most Applied</a></li>
+							id="aplicants-list">Applicants</a></li>
 						<li role="presentation" class="active" >
 							<a href="#recent-jobs" data-toggle="tab"  id="recent-list">Posted 
 								Jobs
@@ -139,15 +144,65 @@ if (!isset($_SESSION['id'])) {
 
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in" id="hot-jobs">
-						<!-- ad-item -->	
+						
 
-						<!-- ad-item -->	
+						<div class="job-ad-item">
+							<div class="item-info">
+								<div class="item-image-box">
+									<div class="item-image">
+								<a href="job-details.php?id=9"> 
+											<img src="images/job/3.png" alt="Image" class="img-responsive"></a>
+									</div><!-- item-image -->
+								</div>
 
-				
-					
-						<!-- ad-item -->	
+								<div class="ad-info">
+									<span>
+									<a href="job-details.php?id=9" class="title">										
+										management									
 
-						<!-- ad-item -->
+									</a> @ <a href="#">
+
+
+
+										AR labs inc											
+											
+										</a></span>
+									<div class="ad-meta">
+										<ul>
+											<li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+
+											india  india 
+										</a></li>
+											<li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>
+												full-time
+											</a></li>
+											<li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>
+												2000-4000											</a></li>
+											<li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>
+										
+											hardware
+										</a></li>
+										</ul>
+									</div><!-- ad-meta -->									
+								</div><!-- ad-info -->
+								<div class="button">
+
+
+								   <button class="applicants_btn" data-id="9">Applicant</button>
+
+								   <div class="edit_icon" data-job_id="11">
+								   	<i class="fa fa-edit" style="font-size:28px"></i>
+								   </div>
+								   <div class="delete_icon">
+								   	<i class="fa fa-remove" style="font-size:32px"></i>
+								   	
+								   </div>
+								
+
+								</div>
+							</div><!-- item-info -->
+
+						</div>
 					</div><!-- tab-pane -->
 
 					<div role="tabpanel" class="tab-pane fade in active" id="recent-jobs">
@@ -236,8 +291,38 @@ if (!isset($_SESSION['id'])) {
 
 ?>
 
-	<!-- footer -->
-	<!-- footer -->
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" id="close_modal">&times;</span>
+      <h2>Are you sure ?</h2>
+    </div>
+    <div class="modal-body">
+    
+
+						<div class="job-ad-item"  id="delete-item">
+							<!-- item-info -->
+
+						</div>
+
+    </div>
+    <div class="modal-footer">
+      <h3> Delete </h3>
+      <div class="inline-block">
+      		<button class="delete_yes"> Yes</button>
+      		<button class="delete_no" > No </button>
+   	   </div>
+
+
+       </div>
+  </div>
+
+</div>
+
+
 
 	
     <!-- JS -->
@@ -246,8 +331,97 @@ if (!isset($_SESSION['id'])) {
 
 
     <script type="text/javascript">
+
+    	var id ;
+    	var modal = document.getElementById('myModal');
+
+    	//variables
     	
-    	$("#recent-jobs").load("../php/posted_job.php");
+    	$("#hot-jobs").load("../php/posted_job.php");
+
+    	$(document).on('click','.applicants_btn',function (evt) {
+
+    		alert("djfj");
+
+    		$("#applicants-list").triger('click');
+
+    		
+    	});
+
+    	$(document).on('click','.edit_icon',function (evt) {
+    		
+    			var id = $(this).attr("data-job_id");
+
+    			var loc = "edit_post.php?job_id="+id;
+
+    			window.location.assign(loc);
+    		
+    		
+
+    		
+    	});
+
+
+    	$(document).on('click','.delete_icon',function (evt) {
+
+    		
+    			id = $(this).attr("data-job_id");
+
+    		
+
+    			 var htm = $(this).parents(".job-ad-item").html();
+
+    			 $("#delete-item").html(htm);
+
+    			 modal.style.display = "block";
+
+    		
+    	});
+    	
+
+
+$("#close_modal").click(function() {
+
+
+    modal.style.display = "none";
+
+
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+	
+		$(".delete_yes").click(function (argument) {
+
+
+			//var delete_id = id;
+
+			var formdt = new Object();
+
+			formdt.delete_id = id;
+
+			console.log(id);
+		
+				$.post("../php/delete_job.php",formdt,function (data,status) 
+				{
+					if (data == "success")
+					 {
+
+								window.location.assign("index.php");
+
+
+					}
+
+					
+
+
+				});
+
+		});
 
     </script>
 

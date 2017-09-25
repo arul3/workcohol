@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -39,8 +45,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Template Developed By ThemeRegion -->
-  </head>
-  <body>
+ 
+<?php include 'header.php';  	?>
+
 	<!-- header -->
 	<!-- header -->
 

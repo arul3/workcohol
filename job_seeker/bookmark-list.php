@@ -1,4 +1,8 @@
+<?php
 
+session_start();
+
+?>
 
 
 <!DOCTYPE html>
@@ -33,6 +37,10 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.html">
     <link rel="apple-touch-icon" sizes="57x57" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <style type="text/css">
+    	
+    </style>
     <!-- icons -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -75,23 +83,20 @@
 
 
 	<script>
-	  
-		$("#bookmark_list").load("../php/bookmark-lst.php");
+	  $("#bookmark_list").load("../php/bookmark-lst.php");
 
-		var add ='<h3>Bookmarked List</h3>';
 
-		var txt = $("#bookmark_list").html();
-
-		html = add +txt;
-
-		$("#bookmark_list").html(html);
-
+		
 		//variables
 
 		var offset=0;
 
 
 $(document).ready(function (argument) {
+
+	
+	
+
 
 			$("#more").click(function (argument) {
 		
@@ -103,14 +108,48 @@ $(document).ready(function (argument) {
 				formdt.offset = offset;
 
 					$("#bookmark_list").load("../php/bookmark-lst.php",formdt);
-		});
+
+					
+
+					});
 
 
+ 
+
+
+			
+		$(document).on('click','.delete',function(){
+
+			
+			
+
+				th=$(this);
+
+				var formdt = new Object();
+
+				formdt.book = $(this).attr('data-book_id');
+
+
+				$.post("../php/bookmark_delete.php",formdt,function(data,status){
+
+					if(data=="success"){
+											th.parentsUntil("#bookmark_list").remove();
+
+
+										}
+
+									});
+				});
+		
+	
 
 
 });
 	
 	</script>	
+  
+<?php  include'header_script.php';  ?>
+
   </body>
 
 
