@@ -3,11 +3,13 @@
 
 session_start();
 
-if(empty($_SESSION['user_id'])){
+if(empty($_SESSION['id'])){
 
-	$_SESSION['user_id'] = 1;
-}$_SESSION['user_id'] = 1;
-$user_id = $_SESSION['user_id'];
+	header("location:../index.php");
+
+}
+$user_id = $_SESSION['id'];
+// $user_name = $_SESSION['name'];
 
  
 if (isset($_GET['id'])) {
@@ -41,8 +43,8 @@ require 'mysql_cnct.php';
 
 	
 
-	<!-- Template Developed By -->
-  <?php 
+	<!-- Template Developed By ThemeRegion -->
+ <?php 
   			if($_SESSION['type'] == "job_seeker")
 
   				include '../job_seeker/header.php';
@@ -66,8 +68,8 @@ require 'mysql_cnct.php';
 							<span id="tit_letterss">Chat list</span>
 						</div>
 						<div id="box_sh_use"></div>
-						
-								
+						<div id="next_slide_list">
+								<div id="no_frind">no frinds</div>
 						<?php
 								
 								$q1="SELECT * from contacts where user_id = $user_id";
@@ -107,7 +109,7 @@ require 'mysql_cnct.php';
 
 						?>
 						
-					    
+					    </div>
 						
 					</div>
 
@@ -119,7 +121,7 @@ require 'mysql_cnct.php';
 					
 					<div id="chat_person">
 						<div id="chat_our_img" ><img src="../php/chat_avatar.php?id=1&w=150&h=150" style="width: 30px;height: 30px;"></div>
-						<span id="our_name">Y</span>
+						<span id="our_name">Your name</span>
 						<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
 						<div id="go_link"></div>
 					</div>
@@ -134,10 +136,9 @@ require 'mysql_cnct.php';
 		<!-- <input type="text" autofocus="true" name="chat_text" id="send_box"> -->
 		<textarea  name="chat_text" placeholder="Enter your message"  wrap="hard" id="send_box" autofocus></textarea>
 		<button id="send" onclick="send_msg()">Send</button>
-		<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 	</div>
 	<div id="mirror_error">
-						<div id="text_logo_chat"><i class="fa fa-users" aria-hidden="true"></i><span id="init_our_mge">Chat your friends</span></div>
+						<div id="text_logo_chat"><!-- <?=$user_name?> --><i class="fa fa-users" aria-hidden="true"></i><span id="init_our_mge">Chat your friends</span></div>
 					</div>
 
 	
@@ -466,7 +467,7 @@ require 'mysql_cnct.php';
 	<script type="text/javascript">
 	function chating_id(frd_id,name){
 		$("#chat_person").css("display" , "inline-flex");
-				$("#text_box").css("display" , "inherit");
+				$("#text_box").css("display" , "inline-flex");
 				$("#chat_window").css("display" , "inherit");
 				$('#mirror_error').css("display" , "none");
       	$('#chat_window').html('');
@@ -481,8 +482,13 @@ require 'mysql_cnct.php';
     //	document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
 </script>
 
-<script type="text/javascript">
+	<?php  include '../job_employer/header_script.php';  ?>
 
+	<script type="text/javascript">
+
+		
+
+    // document.getElementById('chat_window').scrollTop = (document.getElementById('new_mess_line').offsetTop)-(document.getElementById('chat_resend').offsetTop);
 
 
 
@@ -501,9 +507,6 @@ require 'mysql_cnct.php';
 
     });
 </script>
-
- 
-<?php include '../job_seeker/header_script.php';  ?>
 
   </body>
 

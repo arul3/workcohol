@@ -73,12 +73,52 @@ include '../php/job_list.php';
 
 				<div class="people">
 
-				
+				<div class="profile">
+					<div class="profile_img"> 
+								<div class="profile_area">
+									<img src="../php/chat_avatar.php?id=1&w=200&h=200" width="105px" height="105px">
+								</div>
+					
+
+						<div class="usr_info">
+							
+							<div class="position">ARULKUMAR S</div>
+							<div class="place" >ZOHO Corparation</div>							
+						</div>
 
 
-				
+
+					</div>
+						<div class="connect_button_area">
+							<button class="connect_button" data-id="1" data-validate="hasing" >connect</button>
+					 	</div>
+				</div>
 
 
+
+				<div class="profile">
+					<div class="profile_img"> 
+								<div class="profile_area">
+									
+									<img src="../php/chat_avatar.php?id=1&w=200&h=200" width="105px" height="105px">
+
+
+								</div>
+					
+
+						<div class="usr_info">
+							
+							<div class="position">SAKTHI J</div>
+							<div class="place" >Notion Press</div>							
+						</div>
+
+
+
+					</div>
+						<div class="connect_button_area">
+							<button class="connect_button" data-id="1" data-validate="hasing" >connect</button>
+					 	</div>
+				</div>
 				</div>
 
 
@@ -211,14 +251,12 @@ include '../php/job_list.php';
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript">
     	
-    	
+    	$(".people").load("../php/employer_you_may_chat.php");
     	
     </script>
     
 <script type="text/javascript">
 			$(document).ready(function(){
-
-				$(".people").load("../php/employer_you_may_chat.php");
 			
 			$(".connect_button").click(function(){
 				

@@ -5,13 +5,13 @@
 
 	
 		
-		if(empty($_SESSION['user_id']))
+		if(empty($_SESSION['id']))
 			$status['status'] = "Please login";
 
 		require 'mysql_cnct.php';
 		if($output['status'] == ""){
 			                   
-			                    $user_id = $_SESSION['user_id'];
+			                    $user_id = $_SESSION['id'];
                     			$fri_id = $_POST['fri_id'];
 
 

@@ -69,13 +69,9 @@ $top_level ="";
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
    <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css">     
+    <link rel="stylesheet" type="text/css" href="post_aditional.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">   
     <link rel="stylesheet" href="../css/main.css">  
-	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
-    <link rel="stylesheet" href="../css/responsive.css">
 	
 	<!-- font -->
 	<!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
@@ -117,11 +113,6 @@ $top_level ="";
 
 	<section class=" job-bg ad-details-page">
 		<div class="container">
-			<div class="breadcrumb-section">
-				<!-- breadcrumb -->
-										
-				<h2 class="title">Edit your posted job</h2>
-			</div><!-- banner -->
 
 			<div class="job-postdetails">
 				<div class="row">	
@@ -262,7 +253,7 @@ $top_level ="";
 									
 									<div class="row form-group select-price">
 										<label class="col-sm-3 label-title">Salary<span class="required">*</span></label>
-										<div class="col-sm-9">
+										<div class="col-sm-9" id="divition_sub">
 											<label>$USD</label>
 
 									<?php											
@@ -327,7 +318,7 @@ $top_level ="";
 										<label class="col-sm-3 label-title">Location<span class="required">*</span></label>
 
 
-										<div class="col-sm-9" >
+										<div class="col-sm-9" id="select_location">
 											
 											
 										<select name="country" class="form-control short" required>
@@ -412,7 +403,9 @@ $top_level ="";
 									</div>
 
 								</div>
-									<button type="submit" id="submit_btn" class="btn btn-primary">Post Your Job</button>
+									<div id="submit_butt">
+									<button type="submit" id="submit_btn" class="btn btn-primary">Edit Your Job</button>
+								</div>
 
 								</div><!-- postdetails -->
 								
@@ -438,6 +431,7 @@ $top_level ="";
 	</section><!-- main -->
 	
 	<!-- footer -->
+	<?php  include 'footer.php';  ?>
 	<!-- footer -->
 	
 	<!--/Preset Style Chooser--> 

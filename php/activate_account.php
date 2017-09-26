@@ -16,7 +16,7 @@ $hash_salt = hash('ripemd128',$data);
 if($hash_salt == $hash)
 
 {
-	echo "succesfully verified";
+	
 
 	$sql= "UPDATE user_info SET status='active'";
 
@@ -54,6 +54,9 @@ function automatic_login()
 		header("Cache-Control: no-cache");
 	
 		header("Pragma: no-cache");
+
+
+		die();
 	}
 
 	if ($_SESSION['type']== "employer"  ) {
@@ -65,7 +68,10 @@ function automatic_login()
 	
 									header("Pragma: no-cache");
 
-									}
+									die();
+
+
+										}
 	
 }
 

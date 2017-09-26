@@ -72,7 +72,6 @@ function chat_list($row)
 
 $job_id = $row['job_id'];
 
-
 $employer_id = get_user($job_id);
 
 $sql = "SELECT id,name,mail FROM user_info WHERE id='$employer_id'";

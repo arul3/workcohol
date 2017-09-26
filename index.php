@@ -38,10 +38,10 @@
 						<!-- form -->
 						<form action="php/logging.php" method="post">
 							<div class="form-group">
-								<input type="email" class="form-control" placeholder="  Email" name="email">
+								<input type="email" class="form-control" placeholder="Email" name="email">
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" placeholder="  Password" name="pass">
+								<input type="password" class="form-control" placeholder="Password" name="pass">
 
 							</div>
 							<button type="submit" href="#" class="btn" id="login">Login</button>

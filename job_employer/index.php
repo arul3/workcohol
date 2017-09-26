@@ -27,7 +27,7 @@ if (!isset($_SESSION['id'])) {
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
-
+    
     <link rel="stylesheet" href="../css/font-awesome.min.css">  
     <link rel="stylesheet" href="../css/main.css">  
 
@@ -63,7 +63,26 @@ if (!isset($_SESSION['id'])) {
 
 				<div class="people">
 
-			
+				<div class="profile">
+					<div class="profile_img"> 
+								<div class="profile_area">
+									<img src="../php/chat_avatar.php?id=1&w=200&h=200" width="105px" height="105px">
+								</div>
+					
+
+						<div class="usr_info">
+							
+							<div class="position">ARULKUMAR S</div>
+							<div class="place" >ZOHO Corparation</div>							
+						</div>
+
+
+
+					</div>
+						<div class="connect_button_area">
+							<button class="connect_button" data-id="1" data-validate="hasing" >connect</button>
+					 	</div>
+				</div>
 
 
 
@@ -195,7 +214,9 @@ if (!isset($_SESSION['id'])) {
 					<!-- ad-item -->	
 					</div><!-- tab-pane -->
 
-
+					<div id = "next_list_butt" >
+						<button class="btn-primary" id="more">load more</button> 
+					</div>
 
 				<!-- tab-pane -->
 				</div><!-- tab-content -->
@@ -204,8 +225,6 @@ if (!isset($_SESSION['id'])) {
 </div>
 
 
-<button class="btn-primary" id="more">load more</button> 
-<button class="btn-primary" id="more2">load more</button> 
 
 
 
@@ -322,7 +341,7 @@ if (!isset($_SESSION['id'])) {
 
     	$(document).on('click','.applicants_btn',function (evt) {
 
-    		alert("under develop");
+    		alert("djfj");
 
     		$("#applicants-list").triger('click');
 

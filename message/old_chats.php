@@ -3,11 +3,11 @@ session_start();
 		$output['error'] = true;
 		$output['status'] = "";
 		
-		if(empty($_SESSION['user_id']))
+		if(empty($_SESSION['id']))
 			$status['status'] = "Please login";
 
 		    if($output['status'] == ""){
-			$user_id = $_SESSION['user_id'];
+			$user_id = $_SESSION['id'];
 			$cu_id = $_POST['cu_id'];
 
 					require 'mysql_cnct.php';

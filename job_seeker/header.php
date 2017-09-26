@@ -63,6 +63,8 @@ if($type == "employer")
 
         <div class="header_left">
             <div class="header_cont">
+
+
              <?php echo "<a href=\"$path\" id=\"header_le_a\">"; ?>
 
 
@@ -86,11 +88,16 @@ if($type == "employer")
 
                  <div id="pro_lool_nav" ><i class="fa fa-caret-up" aria-hidden="true"></i></div>
 
-                 <a href="js.html"> <div class="pro_nav_li">Profile</div></a>
-                 <a href="post-resume.php"> <div class="pro_nav_li">Post Resume</div> </a>
+                 <a href="#"> <div class="pro_nav_li">Profile</div></a>
+                 
+
+                 <a href="../job_seeker/post-resume.php">
+
+
+                  <div class="pro_nav_li" >Post Resume</div> </a>
                
-                 <a href=""> <div class="pro_nav_li">Resume Edit</div> </a>
-                 <a href="bookmark-list.php"> <div class="pro_nav_li">Book Marked</div> </a>
+                 <a href="#"> <div class="pro_nav_li">Resume Edit</div> </a>
+                 <a href="../job_seeker/bookmark-list.php"> <div class="pro_nav_li">Book Marked</div> </a>
                  <a href="../php/logout.php">
                   
                   <div class="pro_nav_li">Log out</div>
