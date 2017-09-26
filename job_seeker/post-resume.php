@@ -28,6 +28,8 @@ session_start();
 	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
     <link rel="stylesheet" href="../css/responsive.css">
 
+    <link rel="stylesheet" href="../css/form-validation.css">
+
 
     <link rel="stylesheet" type="text/css" href="../css/form-validation.css">
 	
@@ -278,7 +280,7 @@ session_start();
 						</form><!-- form -->
 						<div class="buttons">
 							
-							<a href="index.php" class="btn cancle">Cancle</a>
+							<a href="index.php" class="btn cancle">Cancel</a>
 						</div>							
 					</div>
 				
@@ -378,6 +380,23 @@ session_start();
 			$("#upload-image-one").click();
 			
 		})
+
+
+
+		document.getElementById("upload-image-one").onchange =function(evt){
+
+			var file = document.getElementById('upload-image-one').checkValidity();
+
+			if(file)
+			{
+				$("#upload-image-two").html("Uploaded");
+
+				$("#upload-image-two").css({"background-color":"rgb(66,134,240)","color":"white"});
+			
+				$(".upload-image").css("border-color","rgb(0,166,81)");
+
+			}
+		}
 	</script>
 		
   </body>

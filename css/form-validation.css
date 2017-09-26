@@ -10,3 +10,10 @@ textarea:focus:invalid
 	border: 2px solid crimson;
 	
 }
+
+#upload-image-one
+{
+
+background-color: !crimson;
+
+}
