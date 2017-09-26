@@ -1,0 +1,35 @@
+i.fa.fa-edit {
+    cursor: pointer;
+}
+
+button.applicants_btn {
+    cursor: pointer;
+}
+
+i.fa.fa-remove {
+    cursor: pointer;
+}
+
+
+
+div#notification_list_2 {width: 420px;color: black;background-color: lightcoral;border-radius: 4px;text-align: left;position: relative;padding: 17px 0px 19px 0px;top: 2px;font-size: 15px;overflow-x: hidden;z-index: 40;float: right;left: -2%;display: none;}
+
+.notifi_li {
+    background-color: transparent;
+    font-size: 15px;
+    padding: 0px 0%;
+    width: 100%;
+    text-align: center;
+    padding: 6px 0px 6px 20px;
+    margin: 0px 0px;
+    text-align: left;
+    display: inline-grid;
+    height: 96%;
+    position: relative;
+    display: none;
+    top: 20%;
+}
+.notifi_li:hover {
+    background-color: rgba(0,0,0,0.4);
+    color: whitesmoke;
+}

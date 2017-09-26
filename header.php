@@ -49,7 +49,7 @@ if($type == "employer")
         <!-- navbar-header -->
         <div id="logo">
           <div id="logo_img">
-            <a href="index.html"><img  src="img/techno1.png" alt="Workcohol" title="Workcohol" style="width: 35px;height: 35px;" ></a>
+            <a href="index.html"><img  src="techno1.png" alt="Workcohol Logo" title="Workcohol" style="width: 35px;height: 35px;" ></a>
           </div>
           <div id="sea_rch_jabs">
             <span id="search_icon_1" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span><input type="text" name="" onclick="click_search();" id="sea_rch_input" placeholder=" Search"><span id="search_icon_2" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -116,6 +116,19 @@ if($type == "employer")
       </div><!-- container -->
     
   </div>
+<script src="js/jquery.min.js"></script> 
+<script type="text/javascript">
+  
+      $(".header_le").hover(function(){
+                      $(this).css({"border-bottom": "1px solid rgb(179,182,185)",
+    "color": "whitesmoke"})
+      });
+      $(".header_le").mouseleave(function(){
+                      $(this).css({"border-bottom": "1px solid transparent",
+    "color": "rgb(179,182,185)"})
+      });
 
 
+
+</script>
 

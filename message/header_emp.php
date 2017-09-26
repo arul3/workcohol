@@ -30,6 +30,8 @@ if($type == "employer")
 
 
 
+
+<link rel="stylesheet" type="text/css" href="../job_employer/aditional_2.css">
 <link rel="stylesheet" href="../css/testing.css">
   <!-- header -->
     </head>
@@ -42,7 +44,7 @@ if($type == "employer")
         <!-- navbar-header -->
         <div id="logo">
           <div id="logo_img">
-            <a href="index.html"><img  src="img/techno1.png" alt="Workcohol" title="Workcohol" style="width: 35px;height: 35px;" ></a>
+            <a href="index.php"><img  src="img/techno1.png" alt="Workcohol" title="Workcohol" style="width: 35px;height: 35px;" ></a>
           </div>
           <div id="sea_rch_jabs">
             <span id="search_icon_1" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span><input type="text" name="" onclick="click_search();" id="sea_rch_input" placeholder=" Search"><span id="search_icon_2" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -61,17 +63,11 @@ if($type == "employer")
 
         <div class="header_left">
             <div class="header_cont">
+              <a href="../job_employer/index.php" id="header_le_a"><div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
 
-           <?php   echo "<a href=\"$path\" id=\"header_le_a\">"  ?>
+              <a href="#" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">Applicant</span></div></a>
 
-
-                <div class="pro_li">
-
-                <i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
-
-              <a href="resume.html" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
-
-              <a href="#" id="header_le_a"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></div></a>
+              <a id="header_le_a" class="notifi_click_fun"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">Notification</span></div></a>
 
               <a href="../message/chating.php" id="header_le_a"><div class="pro_li"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></div></a>
               
@@ -87,17 +83,58 @@ if($type == "employer")
 
                  <div id="pro_lool_nav" ><i class="fa fa-caret-up" aria-hidden="true"></i></div>
 
-                 <a href="js.html"> <div class="pro_nav_li">Profile</div></a>
-                 <a href="post-resume.html"> <div class="pro_nav_li">Post Resume</div> </a>
+                 <a href="#"> <div class="pro_nav_li">Profile</div></a>
+                 <a href="../job_employer/post.php"> <div class="pro_nav_li">Post Job</div> </a>
                
-                 <a href=""> <div class="pro_nav_li">Resume Edit</div> </a>
-                 <a href="bookmark-list.php"> <div class="pro_nav_li">Book Marked</div> </a>
+                 <a href="#"> <div class="pro_nav_li">Applicant</div> </a>
+                 <a href="#"> <div class="pro_nav_li">Marked Applicant</div> </a>
                  <a href="../php/logout.php">
                   
                   <div class="pro_nav_li">Log out</div>
 
                 </a>
           </div>
+          <!-- <div id="notification_list_2">
+
+                 
+
+                 <a href="#"> 
+                  <div class="notifi_li">
+                   <div class="notifi_read_img">
+                     <img src="" />
+                   </div>
+                   <div class="notifi_read_name">
+                        YOGA
+                   </div>
+                   <div class="notifi_accept">
+                        <a href="#">add</a>
+                   </div>
+                   <div class="notifi_cancel">
+                       <a href="#">remove</a>
+                   </div>
+                 </div>
+               </a>
+
+                 <a href="#"> 
+                  <div class="notifi_li">
+                       <div class="notifi_read_img">
+                         <img src="" />
+                       </div>
+                       <div class="notifi_read_name">
+                            YOGA
+                       </div>
+                       <div class="notifi_accept">
+                            add
+                       </div>
+                       <div class="notifi_cancel">
+                           remove
+                       </div>
+                 </div>
+               </a>
+                 
+
+                
+          </div> -->
           
         </div>
         <!-- /navbar-header -->
@@ -124,6 +161,5 @@ if($type == "employer")
 
 
 
-
-
-
+    <!-- JS -->
+    

@@ -47,11 +47,11 @@ require 'mysql_cnct.php';
  <?php 
   			if($_SESSION['type'] == "job_seeker")
 
-  				include '../job_seeker/header.php';
+  				include 'header_seek.php';
 
   			if($_SESSION['type'] == "employer")
   				
-  				include '../job_employer/header.php';
+  				include 'header_emp.php';
   			
 
   ?>
@@ -69,12 +69,13 @@ require 'mysql_cnct.php';
 						</div>
 						<div id="box_sh_use"></div>
 						<div id="next_slide_list">
-								<div id="no_frind">no frinds</div>
+								
 						<?php
 								
 								$q1="SELECT * from contacts where user_id = $user_id";
 								$r1=mysqli_query($dbc,$q1);
 									if($r1){
+										if(mysqli_num_rows($r1) >  0){
 											
 											while( $row = mysqli_fetch_array($r1,MYSQLI_ASSOC)){
 												$fri_id = $row['cu_id'];
@@ -94,10 +95,7 @@ require 'mysql_cnct.php';
 												<div class="fri_name" onclick="chating_id(<?=$fri_id?>,'<?=$your_fri_name?>');">
 													<span id="tit_list_name"><?=$your_fri_name?></span><!-- <?=$your_fri_name?> -->
 												</div>
-												<i class="fa fa-times" aria-hidden="true" onclick="cansal_friend(<?=$fri_id?>);" id="remove_fun"
-
-
-											<?php	echo  "data-fir_id=\"$fri_id\"></i>";   ?>
+												<i class="fa fa-times" aria-hidden="true" onclick="cansal_friend(<?=$fri_id?>);" id="remove_fun"></i>
 												</div>
 												<?php
 												}
@@ -105,6 +103,8 @@ require 'mysql_cnct.php';
 														//echo "$your_fri_name<br>";
 											}
 										}
+										else{ ?><div id="no_frind">no frinds</div><?php }
+									}
 									
 
 						?>

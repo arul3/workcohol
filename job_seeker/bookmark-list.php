@@ -24,6 +24,7 @@ session_start();
 	<!-- <link rel="stylesheet" href="../css/icofont.css"> 
     <link rel="stylesheet" href="../css/slidr.css"> -->     
     <link rel="stylesheet" href="../css/main.css">  
+    <link rel="stylesheet" type="text/css" href="book_mark.css">
 	<!-- <link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
     <link rel="stylesheet" href="../css/responsive.css"> -->
 	
@@ -57,6 +58,9 @@ session_start();
 	<section class=" job-bg page  ad-profile-page">
 		<div class="container">
 			<!-- breadcrumb-section -->
+			<div id="tit_book_mark">
+				Bookmark List
+			</div>
 		<!-- ad-profile -->
 
 			<div class="section trending-ads latest-jobs-ads"  id="bookmark_list">
@@ -64,11 +68,15 @@ session_start();
 					
 
 				<!-- ad-item -->	
-			</div><!-- latest-jobs-ads -->									
+			</div>
+			<div id="submit_next_book">
+            <button id="more" > Load more </button>
+            </div><!-- latest-jobs-ads -->									
 		</div><!-- container -->
 	</section><!-- ad-profile-page -->
 
 	<!-- footer -->
+	<?php  include '../footer.php';  ?>
 	<!-- footer -->
 	
 	<!--/Preset Style Chooser--> 
@@ -76,7 +84,7 @@ session_start();
 	<!--/End:Preset Style Chooser-->
 	
     <!-- JS -->
-    <button id="more"> Load more </button>
+    
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
    
@@ -98,7 +106,7 @@ $(document).ready(function (argument) {
 	
 
 
-			$("#more").click(function (argument) {
+			$("more").click(function (argument) {
 		
 
 				offset +=6;

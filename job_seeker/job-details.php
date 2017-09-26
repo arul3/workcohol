@@ -92,6 +92,8 @@ $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
     <link rel="stylesheet" href="../css/main.css">  
 	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="resume_aditional.css">
+    <link rel="stylesheet" type="text/css" href="job_details_add.css">
 	
 	<!-- font -->
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>

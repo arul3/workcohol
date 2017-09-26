@@ -181,57 +181,6 @@ include '../php/job_list.php';
 
 
 
-
-
-
-		<div class="container">
-			<!-- category ad -->	
-
-				
-
-			
-			
-		<!-- workshop-traning -->
-
-			<div class="section cta cta-two text-center">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="single-cta">
-							<div class="cta-icon icon-jobs">
-								<img src="images/icon/31.png" alt="Icon" class="img-responsive">
-							</div><!-- cta-icon -->
-							<h3>3,412</h3>
-							<h4>Live Jobs</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-						</div>
-					</div><!-- single-cta -->
-
-					<div class="col-sm-4">
-						<div class="single-cta">
-							<!-- cta-icon -->
-							<div class="cta-icon icon-company">
-								<img src="images/icon/32.png" alt="Icon" class="img-responsive">
-							</div><!-- cta-icon -->
-							<h3>12,043</h3>
-							<h4>Total Company</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-						</div>
-					</div><!-- single-cta -->
-
-					<div class="col-sm-4">
-						<div class="single-cta">
-							<div class="cta-icon icon-candidate">
-								<img src="images/icon/33.png" alt="Icon" class="img-responsive">
-							</div><!-- cta-icon -->
-							<h3>5,798,298</h3>
-							<h4>Total Candidate</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-						</div>
-					</div><!-- single-cta -->
-				</div><!-- row -->
-			</div><!-- cta -->			
-
-		</div><!-- conainer -->
 	</div><!-- page -->
 	
 	<!-- download -->

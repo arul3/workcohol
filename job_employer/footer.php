@@ -4,7 +4,7 @@
 	<footer id="footer" class="clearfix">
 		<!-- footer-top -->
 		<section class="footer-top clearfix">
-			<div class="container">
+			<div class="container_foot">
 				<div class="row">
 					<!-- footer-widget -->
 					<div class="col-sm-3">
@@ -67,7 +67,7 @@
 
 		<div class="footer-bottom clearfix text-center">
 			<div class="container">
-				<p>Copyright &copy; <a href="#">Jobs</a> 2017. Developed by <a href="http://themeregion.com/">ThemeRegion</a></p>
+				<p>Copyright &copy; <a href="#" title="Workcohol">Jobs</a> 2017. Developed by <a href="https://chennaicreativesolutions.com/" title="Chennai Creative Solutions">Chennai Creative Solutions</a></p>
 			</div>
 		</div><!-- footer-bottom -->
 	</footer><!-- footer -->
