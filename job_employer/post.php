@@ -122,7 +122,7 @@ session_start();
 										</div>
 									</div>
 									<div class="row form-group">
-										<label class="col-sm-3 label-title">Title for your jonb<span class="required">*</span></label>
+										<label class="col-sm-3 label-title">Title for your job<span class="required">*</span></label>
 										<div class="col-sm-9">
 											<input type="text" class="form-control" placeholder="ex, Human Resource Manager" name="job_title" required>
 
@@ -144,7 +144,7 @@ session_start();
 									<div class="row form-group select-price">
 										<label class="col-sm-3 label-title">Salary<span class="required">*</span></label>
 										<div class="col-sm-9" id="divition_sub">
-											<label>$USD</label>
+											<label></label>
 											<input type="text" class="form-control" placeholder="Min" name="salary_min" required>
 											
 											<span>-</span>
@@ -187,16 +187,22 @@ session_start();
 												<option value="america">COUNTRY</option>
 									
 
-												<option value="india" >INDIA</option>
+												<option value="india" >India</option>
+
 											</select>
 
 										
-										<select name="state" class="form-control short" required>
+										<select name="state" class="form-control short" 
 
-										         <option value="">STATE </option>
+																	required>
+
+										      <option value="" >STATE</option>
 									
 
-										         <option value="india" >TAMILNADU</option>
+										        <option value="tamilnadu" >Tamilnadu</option>
+										        <option value="telungana" >Telungana</option>
+										        <option value="kerala" >Kerala</option>
+										        <option value="delhi" >Delhi</option>
 										</select>
 
 										

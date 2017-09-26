@@ -263,7 +263,7 @@ $top_level ="";
 									<div class="row form-group select-price">
 										<label class="col-sm-3 label-title">Salary<span class="required">*</span></label>
 										<div class="col-sm-9" id="divition_sub">
-											<label>$USD</label>
+											<label></label>
 
 									<?php											
 											
@@ -334,7 +334,7 @@ $top_level ="";
 												<option value="">COUNTRY</option>
 									<?php
 
-											if ($post['country']== "india") 
+											if ($post['country'] == "india") 
 												$india = "selected";
 
 												
@@ -354,21 +354,21 @@ $top_level ="";
 										$telungana="";
 										$Kerala ="";
 
-										if($post['state']=="Tamilnadu")
+										if($post['state']=="tamilnadu")
 											$tamilnadu ="selected";
 
-											if($post['state']=="Telungana")
+											if($post['state']=="telungana")
 
 												$telungana ="selected";
 
-												if($post['state']=="Kerala")
+												if($post['state']=="kerala")
 
 														$Kerala="selected";
 
 
-										echo	"<option value=\"Tamilnadu\" $tamilnadu>TAMILNADU</option>
-										         <option value=\"Telungana\" $telungana>Telungana</option>
-										         <option value=\"Kerala\" $Kerala>KERALA</option>";
+										echo	"<option value=\"tamilnadu\" $tamilnadu>TAMILNADU</option>
+										         <option value=\"telungana\" $telungana>Telungana</option>
+										         <option value=\"kerala\" $Kerala>KERALA</option>";
 
 
 
