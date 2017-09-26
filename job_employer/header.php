@@ -98,16 +98,42 @@ if($type == "employer")
 
                  
 
-                 <a href="#"> <div class="notifi_li">Profile</div></a>
-                 <a href="post.php"> <div class="notifi_li">Post Job</div> </a>
-               
-                 <a href="#"> <div class="notifi_li">Applicant</div> </a>
-                 <a href="#"> <div class="notifi_li">Marked Applicant</div> </a>
-                 <a href="../php/logout.php">
-                  
-                  <div class="notifi_li">Log out</div>
+                 <a href="#"> 
+                  <div class="notifi_li">
+                   <div class="notifi_read_img">
+                     <img src="" />
+                   </div>
+                   <div class="notifi_read_name">
+                        YOGA
+                   </div>
+                   <div class="notifi_accept">
+                        <a href="#">add</a>
+                   </div>
+                   <div class="notifi_cancel">
+                       <a href="#">remove</a>
+                   </div>
+                 </div>
+               </a>
 
-                </a>
+                 <a href="#"> 
+                  <div class="notifi_li">
+                       <div class="notifi_read_img">
+                         <img src="" />
+                       </div>
+                       <div class="notifi_read_name">
+                            YOGA
+                       </div>
+                       <div class="notifi_accept">
+                            add
+                       </div>
+                       <div class="notifi_cancel">
+                           remove
+                       </div>
+                 </div>
+               </a>
+                 
+
+                
           </div>
           
         </div>

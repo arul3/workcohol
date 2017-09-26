@@ -12,7 +12,7 @@ i.fa.fa-remove {
 
 
 
-div#notification_list_2 {width: 200px;color: black;background-color: lightcoral;border-radius: 4px;text-align: left;position: relative;padding: 17px 0px 19px 0px;top: 2px;font-size: 15px;overflow-x: hidden;z-index: 40;float: right;left: -23%;display: none;}
+div#notification_list_2 {width: 420px;color: black;background-color: lightcoral;border-radius: 4px;text-align: left;position: relative;padding: 17px 0px 19px 0px;top: 2px;font-size: 15px;overflow-x: hidden;z-index: 40;float: right;left: -2%;display: none;}
 
 .notifi_li {
     background-color: transparent;

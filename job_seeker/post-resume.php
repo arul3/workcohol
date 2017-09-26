@@ -64,8 +64,10 @@ session_start();
 			<div class="adpost-details post-resume">
 				<div class="row">	
 					<div class="col-md-8 clearfix">
-						<form action="../php/resume_update.php" method="post"  id="resume" autocomplete="on">
+						<!-- <form action="../php/resume_update.php" method="post"  id="resume" autocomplete="on"> -->
 							<fieldset>
+
+								
 								<div class="section express-yourself">
 									<h4>Express Yourself</h4>
 									<div class="row form-group">
@@ -105,72 +107,24 @@ session_start();
 								
 								<div class="section">
 									<h4>Work History</h4>
-									<div class="row form-group">
-										<label class="col-sm-3 label-title">Compnay Name</label>
-										<div class="col-sm-9">
-											<input type="text" name="company_name" class="form-control" placeholder="Name" required>
-										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-sm-3 label-title">Designation</label>
-										<div class="col-sm-9">
-											<input type="text" name="designation" class="form-control" placeholder="Human Resource Manager" required>
-										</div>
-									</div>
-									<div class="row form-group time-period">
-										<label class="col-sm-3 label-title">Time Period</label>
-										<div class="col-sm-9">
-											<input type="date" name="work_start" class="form-control" placeholder="dd/mm/yy" 
 
-											
-											required ><span>-</span>
-											<input type="date" name="work_end"   class="form-control pull-right" placeholder="dd/mm/yy" required>
-										</div>
-									</div>
-									<div class="row form-group job-description">
-										<label class="col-sm-3 label-title">Job Description</label>
-										<div class="col-sm-9">
-											<textarea class="form-control" placeholder="" rows="8" name="job_description" required></textarea>		
-										</div>
-									</div>
-									<div class="buttons pull-right">
-										<a href="#" class="btn">Add New Exprience</a>
-										<a href="#" class="btn delete">Delete</a>
+								<div id="work_list">
+								
+
+
+
+								
 									</div>
 								</div><!-- work-history -->
 								
 								<div class="section education-background">
 									<h4>Education Background</h4>
-									<div class="row form-group">
-										<label class="col-sm-3 label-title">Institute Name</label>
-										<div class="col-sm-9">
-											<input type="text" name="college_name" class="form-control" placeholder="ropbox" required>
-										</div>
-									</div>
-									<div class="row form-group">
-										<label class="col-sm-3 label-title">Degree</label>
-										<div class="col-sm-9">
-											<input type="text" name="degree" class="form-control" placeholder="Human Resource Manager" required>
-										</div>
-									</div>
-									<div class="row form-group time-period">
-										<label class="col-sm-3 label-title">Time Period</label>
-										<div class="col-sm-9">
-											<input type="date"  name="start-time" class="form-control" placeholder="dd/mm/yy" required><span>-</span>
-											<input type="date"  name="end_time" class="form-control pull-right" placeholder="dd/mm/yy" required>
-										</div>
-									</div>
-									<div class="row form-group job-description">
-										<label class="col-sm-3 label-title">Description</label>
-										<div class="col-sm-9">
-											<textarea class="form-control" placeholder="" rows="8" name="ed_description" required></textarea>		
-										</div>
-									</div>
-									<div class="buttons pull-right">
-										<a href="#" class="btn">Add New Education</a>
-										<a href="#" class="btn delete">Delete</a>
-									</div>
-								</div><!-- work-history -->
+
+
+								<div id="education_list">
+
+								</div>
+							</div><!-- work-history -->
 
 								<div class="section special-qualification">
 									<h4>Special Qualification</h4>
@@ -223,23 +177,26 @@ session_start();
 
 								<div class="section company-information">
 									<h4>Personal Deatils</h4>
+
+							<form	id="personal">
+								
 									<div class="row form-group">
 										<label class="col-sm-3 label-title">Full Name</label>
 										<div class="col-sm-9">
-											<input type="text" name="name" class="form-control" placeholder="Jhon Doe">
+											<input type="text" name="name" class="form-control" placeholder="Jon Snow" >
 										</div>
 									</div>
 									<div class="row form-group">
 										<label class="col-sm-3 label-title">Father's Name</label>
 										<div class="col-sm-9">
-											<input type="text" name="fname" class="form-control" placeholder="Robert Doe">
+											<input type="text" name="fname" class="form-control" placeholder="Robert deo">
 										</div>
 									</div>
 									
 									<div class="row form-group">
 										<label class="col-sm-3 label-title">Date of Birth</label>
 										<div class="col-sm-9">
-											<input type="date" name="dob" class="form-control" placeholder="26/01/1982"  required>
+											<input type="date" name="dob" class="form-control" placeholder="20/02/1995"  required>
 										</div>
 									</div>
 									
@@ -248,7 +205,7 @@ session_start();
 									<div class="row form-group">
 										<label class="col-sm-3 label-title">Nationality</label>
 										<div class="col-sm-9">
-											<input type="text" name="nationality" class="form-control" placeholder="Canadian" required>
+											<input type="text" name="nationality" class="form-control" placeholder="Indian" required>
 										</div >
 									</div>
 									<div class="row form-group">
@@ -260,13 +217,15 @@ session_start();
 									<div class="row form-group">
 										<label class="col-sm-3 label-title">Address</label>
 										<div class="col-sm-9">
-											<input type="text" name="permenent_address" class="form-control" placeholder="121 King Street, Melbourne Victoria, 1200 USA" required>
+											<input type="text" name="permenent_address" class="form-control" placeholder="Sardar patel road, Guindy, Cheenai 25" required>
 										</div>
 									</div>
 									<div class="buttons pull-right">
-										<a href="#" class="btn">Add New Feild</a>
+										<a href="#" class="btn"> UPDATE </a>
 									</div>
 								</div><!-- section -->
+
+							</form>
 
 								<div class="section special-qualification">
 									<h4>Declaration</h4>
@@ -277,10 +236,10 @@ session_start();
 							</fieldset>
 
 							<input type="submit" value="submit" class="btn" id="submit">
-						</form><!-- form -->
+					<!-- 	</form> --><!-- form -->
 						<div class="buttons">
 							
-							<a href="index.php" class="btn cancle">Cancel</a>
+							<a href="index.php" class="btn cancle"> CANCEL </a>
 						</div>							
 					</div>
 				
@@ -397,6 +356,131 @@ session_start();
 
 			}
 		}
+	</script>
+
+
+	<script type="text/javascript">
+		
+		$("#work_list").load("work_history_list.php");
+
+		$("#education_list").load("education_list.php");
+
+		$(document).on('click','#add_work',function (evt) {
+
+    		 
+			
+			
+
+			var formdt = new Object();
+
+
+					var input = $("#latest").serialize();
+
+					
+
+
+				$.post("work_history_insert.php",input,function (data,status) 
+				{
+					if (data == "success")
+					 {
+
+							
+					 		$("#work_list").load("work_history_list.php");
+					}
+
+					
+
+
+				});
+    		
+
+
+    		
+    	});
+
+		$(document).on('click','#delete_work',function (evt) {
+
+    		 
+			var formdt = new Object();
+
+				formdt.work_id = $(this).attr("data-work_id");
+			
+
+			$.post("work_delete.php",formdt,function (data,status) 
+				{
+					if ( data == "success")
+					 {
+
+					 		$("#work_list").load("work_history_list.php");
+					}
+
+					
+
+
+				});
+    		
+
+
+    		
+    	});
+
+
+$(document).on('click','#add_education',function (evt) {
+
+    		 
+			
+
+					var input = $("#education").serialize();
+
+					
+					alert(input);
+
+
+				$.post("education_insert.php",input,function (data,status) 
+				{
+					if (data == "success")
+					 {
+
+							
+					 		$("#education_list").load("education_list.php");
+					}
+
+					
+
+
+				});
+    		
+
+
+    		
+    	});
+
+		$(document).on('click','#delete_education',function (evt) {
+
+    		 
+			var formdt = new Object();
+
+				formdt.educat_id = $(this).attr("data-educat_id");
+			
+
+			$.post("education_delete.php",formdt,function (data,status) 
+				{
+					if ( data == "success")
+					 {
+
+					 		$("#education_list").load("education_list.php");
+					}
+
+					
+
+
+				});
+    		
+
+
+    		
+    	});
+
 	</script>
 		
   </body>

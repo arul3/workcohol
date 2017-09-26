@@ -11,7 +11,6 @@
 
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
-    <link rel="stylesheet" type="text/css" href="css/testing.css">
    <!-- CSS -->
    
     <link rel="stylesheet" href="css/font-awesome.min.css">   
