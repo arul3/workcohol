@@ -37,7 +37,7 @@ if($type == "employer")
 
 
 
-<link rel="stylesheet" href="../css/testing.css">
+<link rel="stylesheet" href="testing.css">
   <!-- header -->
     </head>
 
@@ -68,13 +68,13 @@ if($type == "employer")
 
         <div class="header_left">
             <div class="header_cont">
-              <a href="index.php" id="header_le_a"><div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
+              <a href="index.php" id="header_le_a" class="header_le"><div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
 
-              <a href="resume.html" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
+              <a id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
 
-              <a href="#" id="header_le_a"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></div></a>
+              <a id="header_le_a"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></div></a>
 
-              <a href="../message/chating.php" id="header_le_a"><div class="pro_li"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></div></a>
+              <a id="header_le_a"><div class="pro_li"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></div></a>
               
           <a class="profile_list" id="header_le_a">
           <div class="pro_li" id="pro_slide">
