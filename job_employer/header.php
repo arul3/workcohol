@@ -32,7 +32,7 @@ if($type == "employer")
 
 
 <link rel="stylesheet" type="text/css" href="../job_employer/aditional_2.css">
-<link rel="stylesheet" href="../css/testing.css">
+<link rel="stylesheet" href="testing.css">
   <!-- header -->
     </head>
 
@@ -44,7 +44,7 @@ if($type == "employer")
         <!-- navbar-header -->
         <div id="logo">
           <div id="logo_img">
-            <a href="index.php"><img  src="img/techno1.png" alt="Workcohol" title="Workcohol" style="width: 35px;height: 35px;" ></a>
+            <a href="index.php"><img  src="img/techno1.png" alt="Workcohol Logo" title="Workcohol" style="width: 35px;height: 35px;" ></a>
           </div>
           <div id="sea_rch_jabs">
             <span id="search_icon_1" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span><input type="text" name="" onclick="click_search();" id="sea_rch_input" placeholder=" Search"><span id="search_icon_2" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -65,9 +65,9 @@ if($type == "employer")
             <div class="header_cont">
               <a href="index.php" id="header_le_a"><div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>
 
-              <a href="resume.html" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">resume</span></div></a>
+              <a href="#" id="header_le_a"><div class="pro_li"><i class="fa fa-file-text" aria-hidden="true"></i><span id="header_manu_name">Applicant</span></div></a>
 
-              <a id="header_le_a" class="notifi_click_fun"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">network</span></div></a>
+              <a id="header_le_a" class="notifi_click_fun"><div class="pro_li"><i class="fa fa-bell-o" aria-hidden="true"></i><span id="header_manu_name">Notification</span></div></a>
 
               <a href="../message/chating.php" id="header_le_a"><div class="pro_li"><i class="fa fa-envelope" aria-hidden="true"></i><span id="header_manu_name">Message</span></div></a>
               
@@ -94,7 +94,7 @@ if($type == "employer")
 
                 </a>
           </div>
-          <div id="notification_list_2">
+          <!-- <div id="notification_list_2">
 
                  
 
@@ -135,7 +135,7 @@ if($type == "employer")
 
                 
           </div>
-          
+           -->
         </div>
         <!-- /navbar-header -->
         

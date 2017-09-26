@@ -67,7 +67,7 @@
 
 		<div class="footer-bottom clearfix text-center">
 			<div class="container">
-				<p>Copyright &copy; <a href="#">Jobs</a> 2017. Developed by <a href="https://chennaicreativesolutions.com/">Chennai Creative Solutions</a></p>
+				<p>Copyright &copy; <a href="#" title="Workcohol">Jobs</a> 2017. Developed by <a href="https://chennaicreativesolutions.com/" title="Chennai Creative Solutions">Chennai Creative Solutions</a></p>
 			</div>
 		</div><!-- footer-bottom -->
 	</footer><!-- footer -->

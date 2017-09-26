@@ -18,15 +18,19 @@ session_start();
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
    <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+   
     <link rel="stylesheet" href="../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/icofont.css"> 
-    <link rel="stylesheet" href="../css/slidr.css"> 
 
         
+ <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/icofont.css"> 
+    <link rel="stylesheet" href="../css/slidr.css">     
     <link rel="stylesheet" href="../css/main.css">  
 	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../css/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="resume_aditional.css">
 
 
     <link rel="stylesheet" type="text/css" href="../css/form-validation.css">
@@ -278,7 +282,7 @@ session_start();
 						</form><!-- form -->
 						<div class="buttons">
 							
-							<a href="index.php" class="btn cancle">Cancle</a>
+							<a href="index.php" class="btn cancle">Cancel</a>
 						</div>							
 					</div>
 				
@@ -290,69 +294,8 @@ session_start();
 	</section><!-- main -->
 	
 	<!-- footer -->
-	<footer id="footer" class="clearfix">
-		<!-- footer-top -->
-		<section class="footer-top clearfix">
-			<div class="container">
-				<div class="row">
-					<!-- footer-widget -->
-					<div class="col-sm-3">
-						<div class="footer-widget">
-							<h3>Quik Links</h3>
-							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">All Cities</a></li>
-								<li><a href="#">Help & Support</a></li>
-								<li><a href="#">Advertise With Us</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
-
-					<!-- footer-widget -->
-					<div class="col-sm-3">
-						<div class="footer-widget">
-							<h3>How to sell fast</h3>
-							<ul>
-								<li><a href="#">How to sell fast</a></li>
-								<li><a href="#">Membership</a></li>
-								<li><a href="#">Banner Advertising</a></li>
-								<li><a href="#">Promote your ad</a></li>
-								<li><a href="#">Jobs Delivers</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
-
-					<!-- footer-widget -->
-					<div class="col-sm-3">
-						<div class="footer-widget social-widget">
-							<h3>Follow us on</h3>
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook-official"></i>Facebook</a></li>
-								<li><a href="#"><i class="fa fa-twitter-square"></i>Twitter</a></li>
-								<li><a href="#"><i class="fa fa-google-plus-square"></i>Google+</a></li>
-								<li><a href="#"><i class="fa fa-youtube-play"></i>youtube</a></li>
-							</ul>
-						</div>
-					</div><!-- footer-widget -->
-
-					<!-- footer-widget -->
-					<!-- footer-widget -->
-				
-
-
-				</div><!-- row -->
-			</div><!-- container -->
-		</section><!-- footer-top -->
-
-		<div class="footer-bottom clearfix text-center">
-			<div class="container">
-				<p>Copyright &copy; <a href="#">Jobs</a>2017. Developed by <a href="http://themeregion.com/">ThemeRegion</a></p>
-			</div>
-		</div><!-- footer-bottom -->
-	</footer><!-- footer -->
+	<?php  include 'footer.php';  ?>
+	<!-- footer -->
 	
 	<!--/Preset Style Chooser--> 
 	
@@ -378,6 +321,23 @@ session_start();
 			$("#upload-image-one").click();
 			
 		})
+
+
+
+		document.getElementById("upload-image-one").onchange =function(evt){
+
+			var file = document.getElementById('upload-image-one').checkValidity();
+
+			if(file)
+			{
+				$("#upload-image-two").html("Uploaded");
+
+				$("#upload-image-two").css({"background-color":"rgb(66,134,240)","color":"white"});
+			
+				$(".upload-image").css("border-color","rgb(0,166,81)");
+
+			}
+		}
 	</script>
 		
   </body>

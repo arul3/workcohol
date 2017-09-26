@@ -1,0 +1,19 @@
+.item-info {
+    width: 100%;
+    display: inline-flex;
+}
+.item-image-box {
+    width: 12%;
+}
+.ad-info {
+    width: 90%;
+}
+
+.item-info {
+    margin-bottom: 14px;
+}
+
+.social-media {
+    position: relative;
+    left: -11%;
+}

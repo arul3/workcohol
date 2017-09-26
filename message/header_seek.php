@@ -32,7 +32,7 @@ if($type == "employer")
 
 
 
-<link rel="stylesheet" href="testing.css">
+<link rel="stylesheet" href="../css/testing.css">
   <!-- header -->
     </head>
 
@@ -44,7 +44,7 @@ if($type == "employer")
         <!-- navbar-header -->
         <div id="logo">
           <div id="logo_img">
-            <a href="index.php"><img  src="img/techno1.png" alt="Workcohol Logo" title="Logo img" style="width: 35px;height: 35px;" ></a>
+            <a href="index.php"><img  src="img/techno1.png" alt="Workcohol" title="Logo img" style="width: 35px;height: 35px;" ></a>
           </div>
           <div id="sea_rch_jabs">
             <span id="search_icon_1" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span><input type="text" name="" onclick="click_search();" id="sea_rch_input" placeholder=" Search"><span id="search_icon_2" onclick="click_search();"><i class="fa fa-search" aria-hidden="true"></i></span>
@@ -65,7 +65,7 @@ if($type == "employer")
             <div class="header_cont">
 
 
-             <a href="index.php" id="header_le_a">
+             <a href="../job_seeker/index.php" id="header_le_a">
 
 
                 <div class="pro_li"><i class="fa fa-home" aria-hidden="true"></i><span id="header_manu_name">home</span></div></a>

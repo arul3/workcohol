@@ -69,9 +69,18 @@ $top_level ="";
     <title>Jobs | Job Portal / Job Board HTML Template</title>
 
    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="post_aditional.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">   
+          <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+        
+ <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/icofont.css"> 
+    <link rel="stylesheet" href="../css/slidr.css">     
     <link rel="stylesheet" href="../css/main.css">  
+	<link id="preset" rel="stylesheet" href="../css/presets/preset1.css">	
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../css/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="resume_aditional.css">
 	
 	<!-- font -->
 	<!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
